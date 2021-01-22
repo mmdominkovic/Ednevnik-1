@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "149114231496",
+    "project_id": "pma-2020-2021",
+    "storage_bucket": "pma-2020-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149114231496:android:7bb72cbfd836af1c4e23fd",
+        "android_client_info": {
+          "package_name": "ba.sum.fpmoz.mim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149114231496-68sp45of7g3cslbi2g5nlprbl938viv1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrFiSOvWD8xCGCwkn8ypteZnNY3ISyx8Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149114231496-68sp45of7g3cslbi2g5nlprbl938viv1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
