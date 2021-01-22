@@ -20,6 +20,7 @@ private CardView classCardId;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_navigation);
         setTitle("Dobrodošli u administraciju" );
+
         this.usersCardId =findViewById(R.id.usersCardId);
         this.usersCardId.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +29,7 @@ private CardView classCardId;
                 startActivity(i);
             }
         });
+
         this.subjectCardId=findViewById(R.id.subjectCardId);
         this.subjectCardId.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +41,7 @@ private CardView classCardId;
         this.classCardId=findViewById(R.id.classCardId);
         this.classCardId.setOnClickListener(v -> {
             Intent i = new Intent(getApplicationContext(), TabbedClassesActivity.class);
+            startActivity(i);
         });
     }
 }

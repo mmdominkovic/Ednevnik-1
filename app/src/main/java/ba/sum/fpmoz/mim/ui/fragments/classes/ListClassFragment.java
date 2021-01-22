@@ -44,10 +44,12 @@ public class ListClassFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+        adapter.startListening();
     }
 
     @Override
     public void onStop() {
         super.onStop();
+        adapter.stopListening();
     }
 }

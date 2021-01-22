@@ -21,7 +21,7 @@ public class ClassAdapter extends FirebaseRecyclerAdapter<Class, ClassAdapter.Cl
 
     @Override
     protected void onBindViewHolder(@NonNull ClassAdapter.ClassViewHolder holder, int position, @NonNull Class model) {
-        holder.classLevel.setText(model.level);
+
         holder.className.setText(model.name);
         holder.classSubject.setText(model.subject);
         holder.classTeacher.setText(model.classTeacher);

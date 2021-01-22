@@ -12,10 +12,8 @@
         <activity android:name=".HomeNavigationActivity"></activity>
         <activity android:name=".UserAdminEditActivity" />
         <activity android:name=".UserMainActivity" />
-        <activity
-            android:name=".TabbedUserAdminActivity"
-            android:label="@string/title_activity_tabbed_user_admin"
-            android:theme="@style/Theme.Ednevnik.NoActionBar" />
+        <activity android:name=".TabbedUserAdminActivity"/>
+        <activity android:name=".TabbedClassesActivity"/>
         <activity android:name=".UserAdminActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
