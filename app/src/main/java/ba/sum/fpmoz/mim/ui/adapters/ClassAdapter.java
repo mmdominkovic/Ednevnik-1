@@ -3,6 +3,7 @@ package ba.sum.fpmoz.mim.ui.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.textfield.TextInputEditText;
 
 import ba.sum.fpmoz.mim.R;
 import ba.sum.fpmoz.mim.model.Class;
@@ -21,10 +23,10 @@ public class ClassAdapter extends FirebaseRecyclerAdapter<Class, ClassAdapter.Cl
 
     @Override
     protected void onBindViewHolder(@NonNull ClassAdapter.ClassViewHolder holder, int position, @NonNull Class model) {
-
-        holder.className.setText(model.name);
-        holder.classSubject.setText(model.subject);
-        holder.classTeacher.setText(model.classTeacher);
+        holder.className.setText(model.getName());
+        holder.classSubject.setText(model.getSubject());
+        holder.classTeacher.setText(model.getClassTeacher());
+        holder.classLevel.setText(model.getLevel());
     }
 
 
@@ -49,10 +51,11 @@ public class ClassAdapter extends FirebaseRecyclerAdapter<Class, ClassAdapter.Cl
         return viewHolder;
     }
     public class ClassViewHolder extends RecyclerView.ViewHolder{
-        TextView classLevel;
         TextView className;
-        TextView classTeacher;
         TextView classSubject;
+        TextView classTeacher;
+        TextView classLevel;
+
 
         Adapter.ClickListener clickListener;
 
@@ -62,10 +65,11 @@ public class ClassAdapter extends FirebaseRecyclerAdapter<Class, ClassAdapter.Cl
 
         public ClassViewHolder(@NonNull View itemView){
             super(itemView);
-            classLevel=itemView.findViewById(R.id.levelClassInp);
-            className=itemView.findViewById(R.id.classNameInp);
-            classSubject=itemView.findViewById(R.id.subjectInp);
-            classTeacher=itemView.findViewById(R.id.classTeacherInp);
+            this.className=itemView.findViewById(R.id.classNameTxt);
+            this.classSubject=itemView.findViewById(R.id.classPredmetTxt);
+            this.classTeacher=itemView.findViewById(R.id.classProfesorTxt);
+            this.classLevel=itemView.findViewById(R.id.classGodinaTxt);
+
 
             itemView.setOnClickListener((v)->{
                 clickListener.OnClickListener(v, getAdapterPosition());

@@ -35,6 +35,7 @@ public class UserMainActivity extends AppCompatActivity {
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                 loggedUser = snapshot.getValue(User.class);
                 loggedUserRoleTextView.setText("Prijavljeni ste kao " + loggedUser.role);
 

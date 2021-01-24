@@ -9,13 +9,39 @@
     <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d18851a-b015-421b-af95-686792ebff71" name="Default Changelist" comment="Dodane ikone">
+    <list default="true" id="1d18851a-b015-421b-af95-686792ebff71" name="Default Changelist" comment="Dodan ispis razreda">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ClassAdminEditActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_class_admin_edit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/HomeNavigationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/HomeNavigationActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/UserMainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/UserMainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/model/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/model/Class.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/ClassAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/ClassAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/ListClassFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/ListClassFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/AddClassFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/AddClassFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_class_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_class_admin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_tabbed_user_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_tabbed_user_admin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_admin_edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_admin_edit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_class_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_class_admin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +87,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android-custom-viewC:/Users/Korisnik/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="android-custom-viewC:/Users/megid/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="multi-representation-previewC:/Users/Korisnik/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/megid/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
@@ -249,6 +278,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Dodane ikone" />
@@ -267,9 +297,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1610981179372" />
-    <state x="847" y="175" key="#com.intellij.ide.util.MemberChooser" timestamp="1611311542595">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="753" y="94" key="#com.intellij.ide.util.MemberChooser" timestamp="1611428038992">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="753" y="94" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1611428038992" />
     <state x="847" y="175" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1611311542595" />
     <state x="697" y="330" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1611227796759">
       <screen x="0" y="0" width="1536" height="824" />
@@ -287,10 +318,15 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="167" key="AndroidCreateResourceDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1611264698941" />
-    <state x="698" y="234" key="AndroidCreateResourceFileDialog" timestamp="1611306975650">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="526" y="207" key="AndroidCreateResourceFileDialog" timestamp="1611416595439">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="526" y="207" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1611416595439" />
     <state x="698" y="234" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1611306975650" />
+    <state x="481" y="109" key="AndroidProcessChooserDialog" timestamp="1611423035876">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="481" y="109" key="AndroidProcessChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1611423035876" />
     <state x="349" y="117" key="AndroidThemeDialog" timestamp="1611242981431">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -299,37 +335,45 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="933" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611319449314" />
-    <state width="1491" height="268" key="GridCell.Tab.0.bottom" timestamp="1611332723808">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1285" height="156" key="GridCell.Tab.0.bottom" timestamp="1611425534981">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1285" height="156" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611425534981" />
     <state width="1491" height="268" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611332723808" />
-    <state width="1491" height="268" key="GridCell.Tab.0.center" timestamp="1611332723808">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1285" height="156" key="GridCell.Tab.0.center" timestamp="1611425534980">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1285" height="156" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1611425534980" />
     <state width="1491" height="268" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611332723808" />
-    <state width="1491" height="268" key="GridCell.Tab.0.left" timestamp="1611332723807">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1285" height="156" key="GridCell.Tab.0.left" timestamp="1611425534980">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1285" height="156" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1611425534980" />
     <state width="1491" height="268" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611332723807" />
-    <state width="1491" height="268" key="GridCell.Tab.0.right" timestamp="1611332723808">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1285" height="156" key="GridCell.Tab.0.right" timestamp="1611425534981">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1285" height="156" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1611425534981" />
     <state width="1491" height="268" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611332723808" />
-    <state width="1491" height="208" key="GridCell.Tab.1.bottom" timestamp="1611313634998">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1285" height="151" key="GridCell.Tab.1.bottom" timestamp="1611424436938">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1285" height="151" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611424436938" />
     <state width="1491" height="208" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611313634998" />
-    <state width="1491" height="208" key="GridCell.Tab.1.center" timestamp="1611313634998">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1285" height="151" key="GridCell.Tab.1.center" timestamp="1611424436937">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1285" height="151" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1611424436937" />
     <state width="1491" height="208" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1611313634998" />
-    <state width="1491" height="208" key="GridCell.Tab.1.left" timestamp="1611313634998">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1285" height="151" key="GridCell.Tab.1.left" timestamp="1611424436937">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1285" height="151" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1611424436937" />
     <state width="1491" height="208" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1611313634998" />
-    <state width="1491" height="208" key="GridCell.Tab.1.right" timestamp="1611313634998">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1285" height="151" key="GridCell.Tab.1.right" timestamp="1611424436937">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1285" height="151" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1611424436937" />
     <state width="1491" height="208" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1611313634998" />
     <state x="698" y="158" key="IDE.errors.dialog" timestamp="1611226270202">
       <screen x="0" y="0" width="1536" height="824" />

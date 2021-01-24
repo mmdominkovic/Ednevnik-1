@@ -22,7 +22,6 @@ import ba.sum.fpmoz.mim.model.Class;
 public class AddClassFragment extends Fragment {
     FirebaseDatabase db;
     DatabaseReference ref;
-
     EditText levelClassInp;
     EditText classNameInp;
     EditText classTeacherInp;
@@ -66,6 +65,7 @@ public class AddClassFragment extends Fragment {
             }
         });
         return classAdminView;
+
     }
 
 }

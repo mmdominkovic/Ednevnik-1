@@ -15,6 +15,8 @@
         <activity android:name=".TabbedUserAdminActivity"/>
         <activity android:name=".TabbedClassesActivity"/>
         <activity android:name=".UserAdminActivity" />
+        <activity android:name=".ClassAdminActivity"/>
+        <activity android:name=".ClassAdminEditActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

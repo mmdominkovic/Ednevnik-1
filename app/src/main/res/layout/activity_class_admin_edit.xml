@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserAdminEditActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:contex=".ClassAdminEditActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,35 +12,34 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/studentNameEdt"
+            android:id="@+id/classLevelEdt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="TextView" />
 
         <EditText
-            android:id="@+id/studentSurnameEdt"
+            android:id="@+id/classNameEdt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="TextView" />
 
         <EditText
-            android:id="@+id/studentUidEdt"
+            android:id="@+id/classSubjectEdt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="TextView" />
+
+        <EditText
+            android:id="@+id/classTeacherEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
 
         <Button
-            android:id="@+id/studentEditBtn"
+            android:id="@+id/classEditBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:text="Uredi"
             android:backgroundTint="@color/green" />
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
