@@ -36,7 +36,7 @@ public class ClassAdminEditActivity extends AppCompatActivity {
         this.classTeacherEdt=findViewById(R.id.classTeacherEdt);
         this.classEditBtn=findViewById(R.id.classEditBtn);
 
-        final String key=getIntent().getStringExtra("");
+        final String key=getIntent().getStringExtra("CLASS_ID");
         this.db=FirebaseDatabase.getInstance();
         this.ref=this.db.getReference("ednevnik/razredi/").child(key);
 
@@ -59,7 +59,6 @@ public class ClassAdminEditActivity extends AppCompatActivity {
                 classNameEdt.setText(klass.name);
                 classSubjectEdt.setText(klass.subject);
                 classTeacherEdt.setText(klass.classTeacher);
-
             }
 
             @Override
@@ -67,5 +66,6 @@ public class ClassAdminEditActivity extends AppCompatActivity {
 
             }
         });
+
     }
 }

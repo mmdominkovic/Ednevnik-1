@@ -5,6 +5,7 @@ public class Class {
     public String name;
     public String subject;
     public String classTeacher;
+
 public Class(){}
     public Class(String level,String name,String subject, String classTeacher) {
         this.level = level;

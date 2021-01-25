@@ -1,8 +1,10 @@
 package ba.sum.fpmoz.mim.ui.adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -13,7 +15,9 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.textfield.TextInputEditText;
 
+import ba.sum.fpmoz.mim.ClassAdminEditActivity;
 import ba.sum.fpmoz.mim.R;
+import ba.sum.fpmoz.mim.UserAdminEditActivity;
 import ba.sum.fpmoz.mim.model.Class;
 public class ClassAdapter extends FirebaseRecyclerAdapter<Class, ClassAdapter.ClassViewHolder> {
 
@@ -55,6 +59,8 @@ public class ClassAdapter extends FirebaseRecyclerAdapter<Class, ClassAdapter.Cl
         TextView classSubject;
         TextView classTeacher;
         TextView classLevel;
+        Button classDeleteBtn;
+        Button classEditBtn;
 
 
         Adapter.ClickListener clickListener;
@@ -65,11 +71,21 @@ public class ClassAdapter extends FirebaseRecyclerAdapter<Class, ClassAdapter.Cl
 
         public ClassViewHolder(@NonNull View itemView){
             super(itemView);
-            this.className=itemView.findViewById(R.id.classNameTxt);
-            this.classSubject=itemView.findViewById(R.id.classPredmetTxt);
-            this.classTeacher=itemView.findViewById(R.id.classProfesorTxt);
-            this.classLevel=itemView.findViewById(R.id.classGodinaTxt);
+            className=itemView.findViewById(R.id.classNameTxt);
+            classSubject=itemView.findViewById(R.id.classPredmetTxt);
+            classTeacher=itemView.findViewById(R.id.classProfesorTxt);
+            classLevel=itemView.findViewById(R.id.classGodinaTxt);
+            classEditBtn=itemView.findViewById(R.id.classEditBtn);
+            classDeleteBtn=itemView.findViewById(R.id.classDeleteBtn);
 
+            classDeleteBtn.setOnClickListener(v -> getRef(getAdapterPosition()).removeValue());
+
+            classEditBtn.setOnClickListener((v) -> {
+                String key = getRef(getAdapterPosition()).getKey();
+                Intent i= new Intent(itemView.getContext(), ClassAdminEditActivity.class);
+                i.putExtra("CLASS_ID", key);
+                itemView.getContext().startActivity(i);
+            } );
 
             itemView.setOnClickListener((v)->{
                 clickListener.OnClickListener(v, getAdapterPosition());
