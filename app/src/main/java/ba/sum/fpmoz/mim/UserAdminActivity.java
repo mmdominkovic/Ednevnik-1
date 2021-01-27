@@ -20,6 +20,7 @@ import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import ba.sum.fpmoz.mim.model.Admin;
 import ba.sum.fpmoz.mim.model.Student;
 import ba.sum.fpmoz.mim.model.Teacher;
 
@@ -33,6 +34,7 @@ public class UserAdminActivity extends AppCompatActivity {
     EditText studentSurnameInp;
     EditText studentUidInp;
     EditText studentEmailInp;
+    EditText studentRoleInp;
     EditText studentPasswordInp, teacherCourseInp;
     CheckBox teacherChck;
     Button addStudentBtn;
@@ -44,11 +46,13 @@ public class UserAdminActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_admin);
 
         this.db = FirebaseDatabase.getInstance();
-        this.ref = this.db.getReference("ednevnik/ucenici");
+        this.ref = this.db.getReference("ednevnik/korisnici1");
+
         this.studentNameInp = findViewById(R.id.studentNameInp);
         this.studentSurnameInp = findViewById(R.id.studentSurnameInp);
         this.studentUidInp = findViewById(R.id.studentUid);
         this.studentEmailInp = findViewById(R.id.studentEmailInp);
+        this.studentRoleInp=findViewById(R.id.studentRoleInp);
         this.studentPasswordInp = findViewById(R.id.studentPasswordInp);
         this.teacherCourseInp = findViewById(R.id.teacherCourseInp);
         this.teacherChck = findViewById(R.id.teacherChck);
@@ -82,15 +86,7 @@ public class UserAdminActivity extends AppCompatActivity {
                 String studentEmail = studentEmailInp.getText().toString();
                 String studentPassword = studentPasswordInp.getText().toString();
                 String teacherCourse = teacherCourseInp.getText().toString();
-
-                if(teacherChck.isChecked()) {
-                    ref.push().setValue(
-                            new Teacher(studentName, studentSurname, teacherCourse, studentEmail, studentPassword));
-                }
-                else {
-                    ref.push().setValue(
-                            new Student(studentUid, studentName, studentSurname, studentEmail, studentPassword));
-                }
+                String studentRole=studentRoleInp.getText().toString();
                 mAuth.createUserWithEmailAndPassword(studentEmail,studentPassword).addOnCompleteListener(
                         new OnCompleteListener<AuthResult>() {
                             @Override
@@ -102,6 +98,20 @@ public class UserAdminActivity extends AppCompatActivity {
                                             .Builder()
                                             .setDisplayName(studentName)
                                             .build();
+                                    if(teacherChck.isChecked()){
+                                        Teacher novi=new Teacher(studentName, studentSurname, teacherCourse, studentEmail, studentPassword,studentRole);
+                                        ref.child(user.getUid())
+                                                .setValue(novi);
+                                    }else if(studentRole.equals("admin")){
+                                        Admin novi=new Admin(studentName,studentSurname,studentEmail,studentPassword,studentRole);
+                                        ref.child(user.getUid())
+                                                .setValue(novi);
+                                    }
+                                    else {
+                                        Student novi=new Student(studentUid, studentName, studentSurname, studentEmail, studentPassword,studentRole);
+                                        ref.child(user.getUid())
+                                                .setValue(novi);
+                                    }
 
                                     user.updateProfile(changeRequest).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
@@ -111,6 +121,7 @@ public class UserAdminActivity extends AppCompatActivity {
                                                 studentSurnameInp.setText("");
                                                 studentUidInp.setText("");
                                                 studentEmailInp.setText("");
+                                                studentRoleInp.setText("");
                                                 studentPasswordInp.setText("");
                                                 teacherCourseInp.setText("");
 
@@ -127,6 +138,7 @@ public class UserAdminActivity extends AppCompatActivity {
                 studentSurnameInp.setText("");
                 studentUidInp.setText("");
                 studentEmailInp.setText("");
+                studentRoleInp.setText("");
                 studentPasswordInp.setText("");
                 teacherCourseInp.setText("");
                 Toast.makeText(

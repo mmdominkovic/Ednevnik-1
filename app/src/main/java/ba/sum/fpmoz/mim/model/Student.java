@@ -6,16 +6,26 @@ public class Student {
     public String surname;
     public String email;
     public String password;
+    public String role;
 
     public Student() {
     }
 
-    public Student(String uid, String name, String surname, String email,String password) {
+    public Student(String uid, String name, String surname, String email, String password, String role) {
         this.uid = uid;
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.password = password;
+        this.role = role;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public String getUid() {

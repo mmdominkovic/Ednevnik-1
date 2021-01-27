@@ -31,8 +31,9 @@ public class ListUsersFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View userListView = inflater.inflate(R.layout.activity_user_list, container, false);
         this.studentListView = userListView.findViewById(R.id.studentListView);
+
         this.db = FirebaseDatabase.getInstance();
-        this.ref = this.db.getReference("ednevnik/ucenici");
+        this.ref = this.db.getReference("ednevnik/korisnici1");
         this.studentListView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         FirebaseRecyclerOptions<Student> options = new FirebaseRecyclerOptions

@@ -40,7 +40,7 @@ public class UserAdminEditActivity extends AppCompatActivity {
         final String key = getIntent().getStringExtra("USER_ID");
 
         this.db = FirebaseDatabase.getInstance();
-        this.ref = this.db.getReference("ednevnik/ucenici/").child(key);
+        this.ref = (DatabaseReference) this.db.getReference("ednevnik/korisnici1/").child(key);
 
         this.studentEditBtn.setOnClickListener((v) -> {
                 Student s = new Student();

@@ -1,30 +1,20 @@
 package ba.sum.fpmoz.mim.model;
 
-public class Teacher {
+public class Admin {
     public String name;
     public String surname;
-    public String course;
     public String email;
     public String password;
     public String role;
 
-    public Teacher() {
+    public Admin() {
     }
 
-    public Teacher(String name, String surname, String course, String email, String password, String role) {
+    public Admin(String name, String surname, String email, String password, String role) {
         this.name = name;
         this.surname = surname;
-        this.course = course;
         this.email = email;
         this.password = password;
-        this.role = role;
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
         this.role = role;
     }
 
@@ -44,14 +34,6 @@ public class Teacher {
         this.surname = surname;
     }
 
-    public String getCourse() {
-        return course;
-    }
-
-    public void setCourse(String course) {
-        this.course = course;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -66,5 +48,14 @@ public class Teacher {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }
