@@ -18,6 +18,8 @@
         <activity android:name=".ClassAdminEditActivity"/>
         <activity android:name=".HomeNavigationProfesorActivity"></activity>
         <activity android:name=".HomeNavigationStudentActivity"></activity>
+        <activity android:name=".SubjectAdminEditActivity"></activity>
+        <activity android:name=".TabbedSubjectAdminActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
