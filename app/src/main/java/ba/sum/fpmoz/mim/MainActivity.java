@@ -15,18 +15,29 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    private String loggedRole;
     private FirebaseAuth mAuth;
     private TextView messageTxt;
     private EditText emailInp;
     private EditText passwordInp;
     private Button loginBtn;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAuth = FirebaseAuth.getInstance();
+
         setContentView(R.layout.activity_main);
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
@@ -40,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         this.loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String email = emailInp.getText().toString();
                 String password = passwordInp.getText().toString();
 
@@ -49,11 +61,16 @@ public class MainActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
                             messageTxt.setText("Uspješno ste se prijavili na sustav!");
                             Intent A = new Intent(getApplicationContext(), HomeNavigationActivity.class);
-                            Intent U  = new Intent(getApplicationContext(), UserMainActivity.class);
-
+                            Intent S  = new Intent(getApplicationContext(), HomeNavigationStudentActivity.class);
+                            Intent P=new Intent(getApplicationContext(),HomeNavigationProfesorActivity.class);
+                            String[] dio=email.split("@");
+                            String email1=dio[1];
                             if (email.equals("marija.dominkovic@fpmoz.sum.ba"))
-                            { startActivity(A);} else
-                                {startActivity(U);}
+                            { startActivity(A);} else if(email.equals("fpmoz.sum.ba")){
+                                startActivity(P);
+                            }else{
+                                startActivity(S);
+                            }
                         }
                         else {
                             System.out.println(task.getException());
