@@ -61,21 +61,37 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
+
             <Button
                 android:id="@+id/studentEditBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:text="Uredi korisnika"
+                android:text="Uredi"
                 app:backgroundTint="@color/green" />
 
             <Button
                 android:id="@+id/studentDeleteBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:text="Pobriši korisnika"
+                android:text="Obriši"
                 app:backgroundTint="@color/green" />
+
         </LinearLayout>
     </LinearLayout>
 

@@ -33,7 +33,7 @@ public class ListUsersFragment extends Fragment {
         this.studentListView = userListView.findViewById(R.id.studentListView);
 
         this.db = FirebaseDatabase.getInstance();
-        this.ref = this.db.getReference("ednevnik/korisnici1");
+        this.ref = this.db.getReference("učenici");
         this.studentListView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         FirebaseRecyclerOptions<Student> options = new FirebaseRecyclerOptions

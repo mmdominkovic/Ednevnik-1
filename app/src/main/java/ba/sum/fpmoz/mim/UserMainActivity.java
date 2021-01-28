@@ -40,7 +40,7 @@ public class UserMainActivity extends AppCompatActivity{
         userId=user.getUid();
         userEmail=user.getEmail();
         FirebaseDatabase db = FirebaseDatabase.getInstance();
-        DatabaseReference ref = db.getReference("/ednevnik/korisnici1").child(userId);
+        DatabaseReference ref = db.getReference("/korisnici").child(userId);
 
             loggedUserTextView.setText("Dobrodošli: " + user.getDisplayName());
 

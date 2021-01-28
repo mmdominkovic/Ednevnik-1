@@ -35,19 +35,16 @@ public class UserAdminEditActivity extends AppCompatActivity {
         this.studentUidEdt = findViewById(R.id.studentUidEdt);
         this.studentEditBtn = findViewById(R.id.studentEditBtn);
 
-
-
         final String key = getIntent().getStringExtra("USER_ID");
 
         this.db = FirebaseDatabase.getInstance();
-        this.ref = (DatabaseReference) this.db.getReference("ednevnik/korisnici1/").child(key);
+        this.ref = (DatabaseReference) this.db.getReference("učenici/").child(key);
 
         this.studentEditBtn.setOnClickListener((v) -> {
-                Student s = new Student();
-                s.name = studentNameEdt.getText().toString();
-                s.surname = studentSurnameEdt.getText().toString();
-                s.uid = studentUidEdt.getText().toString();
-                ref.setValue(s);
+            Student s = new Student();
+            s.name = studentNameEdt.getText().toString();
+            s.uid = studentUidEdt.getText().toString();
+            ref.setValue(s);
 
         });
         this.ref.addValueEventListener(new ValueEventListener() {
@@ -56,7 +53,6 @@ public class UserAdminEditActivity extends AppCompatActivity {
                 Student student = snapshot.getValue(Student.class);
                 assert student != null;
                 studentNameEdt.setText(student.name);
-                studentSurnameEdt.setText(student.surname);
                 studentUidEdt.setText(student.uid);
             }
 

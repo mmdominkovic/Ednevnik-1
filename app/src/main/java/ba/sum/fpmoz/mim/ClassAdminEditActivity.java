@@ -38,7 +38,7 @@ public class ClassAdminEditActivity extends AppCompatActivity {
 
         final String key=getIntent().getStringExtra("CLASS_ID");
         this.db=FirebaseDatabase.getInstance();
-        this.ref=this.db.getReference("ednevnik/razredi/").child(key);
+        this.ref=this.db.getReference("razredi/").child(key);
 
         this.classEditBtn.setOnClickListener((v) ->{
             Class c=new Class();

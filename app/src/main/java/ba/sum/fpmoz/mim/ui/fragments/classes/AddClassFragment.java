@@ -35,7 +35,7 @@ public class AddClassFragment extends Fragment {
         final View classAdminView = inflater.inflate(R.layout.activity_class_admin,container,false);
 
         this.db = FirebaseDatabase.getInstance();
-        this.ref = this.db.getReference("ednevnik/razredi");
+        this.ref = this.db.getReference("razredi");
 
         this.levelClassInp = classAdminView.findViewById(R.id.levelClassInp);
         this.classNameInp = classAdminView.findViewById(R.id.classNameInp);

@@ -32,7 +32,7 @@ public class ListClassFragment extends Fragment {
       View classListView = inflater.inflate(R.layout.activity_class_list, container, false);
       this.classListView=classListView.findViewById(R.id.classListView);
       this.db = FirebaseDatabase.getInstance();
-      this.ref =this.db.getReference("ednevnik/razredi");
+      this.ref =this.db.getReference("razredi");
       this.classListView.setLayoutManager(new LinearLayoutManager(getContext()));
 
       FirebaseRecyclerOptions<Class> options =new FirebaseRecyclerOptions.Builder<Class>().setQuery(this.ref, Class.class).build();

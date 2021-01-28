@@ -1,22 +1,19 @@
 package ba.sum.fpmoz.mim.ui.fragments.users;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
@@ -26,24 +23,20 @@ import com.google.firebase.database.FirebaseDatabase;
 import ba.sum.fpmoz.mim.R;
 import ba.sum.fpmoz.mim.model.Admin;
 import ba.sum.fpmoz.mim.model.Student;
-import ba.sum.fpmoz.mim.model.Teacher;
+import ba.sum.fpmoz.mim.model.User;
 
 
 public class AddUsersFragment extends Fragment {
 
     private FirebaseAuth mAuth;
     FirebaseDatabase db;
-    DatabaseReference ref;
+    DatabaseReference ref, stu, nas;
     EditText studentNameInp;
-    EditText studentSurnameInp;
-    EditText studentUidInp;
     EditText studentEmailInp;
-    EditText studentRoleInp;
-    EditText studentPasswordInp, teacherCourseInp;
+    EditText studentPasswordInp, teacherCourseInp, studentGradeInp;
     CheckBox teacherChck;
     Button addStudentBtn;
-
-
+    TextView messageTxt1;
 
     @Nullable
     @Override
@@ -52,17 +45,18 @@ public class AddUsersFragment extends Fragment {
         final View userAdminView = inflater.inflate(R.layout.activity_user_admin, container, false);
 
         this.db = FirebaseDatabase.getInstance();
-        this.ref = this.db.getReference("ednevnik/korisnici1");
+        this.ref = this.db.getReference("korisnici");
+        this.nas = this.db.getReference("nastavnici");
+        this.stu = this.db.getReference("učenici");
 
         this.studentNameInp = userAdminView.findViewById(R.id.studentNameInp);
-        this.studentSurnameInp = userAdminView.findViewById(R.id.studentSurnameInp);
-        this.studentUidInp = userAdminView.findViewById(R.id.studentUid);
         this.studentEmailInp = userAdminView.findViewById(R.id.studentEmailInp);
         this.studentPasswordInp = userAdminView.findViewById(R.id.studentPasswordInp);
-        this.studentRoleInp=userAdminView.findViewById(R.id.studentRoleInp);
         this.addStudentBtn = userAdminView.findViewById(R.id.addStudentBtn);
         this.teacherCourseInp = userAdminView.findViewById(R.id.teacherCourseInp);
+        this.studentGradeInp = userAdminView.findViewById(R.id.studentGradeInp);
         this.teacherChck = userAdminView.findViewById(R.id.teacherChck);
+        this.messageTxt1 = userAdminView.findViewById(R.id.messageTxt1);
 
         teacherChck.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,86 +64,81 @@ public class AddUsersFragment extends Fragment {
 
                 if(((CheckBox)v).isChecked())
                 {
-                    studentUidInp.setVisibility(View.GONE);
                     teacherCourseInp.setVisibility(View.VISIBLE);
+                    studentGradeInp.setVisibility(View.GONE);
                 }
                 else
                 {
-                    studentUidInp.setVisibility(View.VISIBLE);
                     teacherCourseInp.setVisibility(View.GONE);
+                    studentGradeInp.setVisibility(View.VISIBLE);
                 }
-
             }
-
         });
         this.addStudentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String studentName = studentNameInp.getText().toString();
-                String studentSurname = studentSurnameInp.getText().toString();
-                String studentUid = studentUidInp.getText().toString();
-                String studentEmail = studentEmailInp.getText().toString();
-                String studentRole=studentRoleInp.getText().toString();
-                String studentPassword = studentPasswordInp.getText().toString();
-                String teacherCourse = teacherCourseInp.getText().toString();
-                mAuth.createUserWithEmailAndPassword(studentEmail,studentPassword).addOnCompleteListener(
-                        new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isSuccessful()){
-                                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                                    UserProfileChangeRequest changeRequest = new UserProfileChangeRequest
-                                            .Builder()
-                                            .setDisplayName(studentName)
-                                            .build();
-                                    if(teacherChck.isChecked()){
-                                        Teacher novi=new Teacher(studentName, studentSurname, teacherCourse, studentEmail, studentPassword,studentRole);
-                                                ref.child(user.getUid())
-                                                .setValue(novi);
-                                    }else if(studentRole.equals("admin")){
-                                        Admin novi=new Admin(studentName,studentSurname,studentEmail,studentPassword,studentRole);
-                                                ref.child(user.getUid())
-                                                .setValue(novi);
-                                    }
-                                    else {
-                                        Student novi=new Student(studentUid, studentName, studentSurname, studentEmail, studentPassword,studentRole);
-                                                ref.child(user.getUid())
-                                                .setValue(novi);
-                                    }
+                final String displayName = studentNameInp.getText().toString();
+                String email = studentEmailInp.getText().toString();
+                String password = studentPasswordInp.getText().toString();
+                String course = teacherCourseInp.getText().toString();
+                String grade = studentGradeInp.getText().toString();
 
-                                    user.updateProfile(changeRequest).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<Void> task) {
-                                            if(task.isSuccessful()){
-                                                studentNameInp.setText("");
-                                                studentSurnameInp.setText("");
-                                                studentUidInp.setText("");
-                                                studentEmailInp.setText("");
-                                                studentPasswordInp.setText("");
-                                                teacherCourseInp.setText("");
-                                                studentRoleInp.setText("");
-
-                                                Log.d("Poruka", "Profil je ažuriran");
-                                            }
-                                        }
-                                    });
+                if(teacherChck.isChecked()){
+                    mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
+                        if (task.isSuccessful()){
+                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            UserProfileChangeRequest changeRequest = new UserProfileChangeRequest
+                                    .Builder()
+                                    .setDisplayName(displayName)
+                                    .build();
+                            user.updateProfile(changeRequest).addOnCompleteListener(task1 -> {
+                                if (task1.isSuccessful()){
+                                    studentEmailInp.setText("");
+                                    studentPasswordInp.setText("");
+                                    studentNameInp.setText("");
+                                    messageTxt1.setText("Korisnički račun je uspješno napravljen.");
+                                    String role="admin";
+                                    User newUser = new User(user.getUid(), user.getEmail(), user.getDisplayName(), role);
+                                    ref.child(user.getUid()).setValue(newUser);
+                                    String id = ref.child(user.getUid()).setValue(newUser).toString();
+                                    Admin a = new Admin(user.getUid(), user.getEmail(), user.getDisplayName());
+                                   // nas.child(user.getUid()).setValue(a);
                                 }
-                            }
+                            });
+                        } else {
+                            Toast.makeText(getContext(), "Nastala je greška pri dodoavanju korisnika: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                         }
-                );
-                studentNameInp.setText("");
-                studentSurnameInp.setText("");
-                studentUidInp.setText("");
-                studentEmailInp.setText("");
-                studentPasswordInp.setText("");
-                teacherCourseInp.setText("");
-                studentRoleInp.setText("");
-                Toast.makeText(
-                        userAdminView.getContext(),
-                        "Uspješno ste dodali korisnika.", Toast.LENGTH_LONG).show();
+                    });
+                } else {
+                    mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
+                        if (task.isSuccessful()){
+                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            UserProfileChangeRequest changeRequest = new UserProfileChangeRequest
+                                    .Builder()
+                                    .setDisplayName(displayName)
+                                    .build();
+                            user.updateProfile(changeRequest).addOnCompleteListener(task1 -> {
+                                if (task1.isSuccessful()){
+                                    studentEmailInp.setText("");
+                                    studentPasswordInp.setText("");
+                                    studentNameInp.setText("");
+                                    messageTxt1.setText("Korisnički račun je uspješno napravljen.");
+                                    String role = "učenik";
+                                    User newUser = new User(user.getUid(), user.getEmail(), user.getDisplayName(), role);
+                                    ref.child(user.getUid()).setValue(newUser);
+                                    String id = ref.child(user.getUid()).setValue(newUser).toString();
+                                    Student s = new Student(user.getUid(), user.getEmail(), user.getDisplayName(), grade);
+                                    stu.child(user.getUid()).setValue(s);
+                                }
+                            });
+                        } else {
+                            Toast.makeText(getContext(), "Nastala je greška pri dodavanju korisnika: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
             }
         });
 
         return userAdminView;
-    }
+}
 }

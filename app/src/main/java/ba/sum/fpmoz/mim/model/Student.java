@@ -3,30 +3,17 @@ package ba.sum.fpmoz.mim.model;
 public class Student {
     public String uid;
     public String name;
-    public String surname;
     public String email;
-    public String password;
-    public String role;
+    public String grade;
 
     public Student() {
     }
 
-    public Student(String uid, String name, String surname, String email, String password, String role) {
+    public Student(String uid, String email, String name, String grade) {
         this.uid = uid;
         this.name = name;
-        this.surname = surname;
         this.email = email;
-        this.password = password;
-        this.role = role;
-
-    }
-
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
+        this.grade = grade;
     }
 
     public String getUid() {
@@ -45,14 +32,6 @@ public class Student {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -61,11 +40,11 @@ public class Student {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getGrade() {
+        return grade;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setGrade(String grade) {
+        this.grade = grade;
     }
 }

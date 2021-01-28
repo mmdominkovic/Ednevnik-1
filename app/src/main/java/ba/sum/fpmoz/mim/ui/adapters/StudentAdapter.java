@@ -27,7 +27,7 @@ public class StudentAdapter extends FirebaseRecyclerAdapter<Student, StudentAdap
     @Override
     protected void onBindViewHolder(@NonNull StudentViewHolder holder, int position, @NonNull Student model) {
         holder.studentName.setText(model.getName());
-        holder.studentSurname.setText(model.getSurname());
+        holder.studentSurname.setText(model.getEmail());
         holder.studentUid.setText(model.getUid());
     }
 
