@@ -10,6 +10,7 @@ import com.google.android.material.tabs.TabLayout;
 import ba.sum.fpmoz.mim.ui.adapters.TabbedAdapter;
 import ba.sum.fpmoz.mim.ui.fragments.classes.AddClassFragment;
 import ba.sum.fpmoz.mim.ui.fragments.classes.ListClassFragment;
+import ba.sum.fpmoz.mim.ui.fragments.users.ListTeachersFragment;
 import ba.sum.fpmoz.mim.ui.fragments.users.ListUsersFragment;
 import ba.sum.fpmoz.mim.ui.fragments.users.AddUsersFragment;
 
@@ -33,6 +34,9 @@ public class TabbedUserAdminActivity extends AppCompatActivity {
 
         this.adapter.addFragment(
                 new AddUsersFragment(), "Korisnici+"
+        );
+        this.adapter.addFragment(
+                new ListTeachersFragment(), "Nastavnici"
         );
 
         this.pager.setAdapter(this.adapter);

@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".UserAdminActivity">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,7 +11,9 @@
         android:orientation="vertical"
         android:padding="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.424">
 
         <TextView
             android:id="@+id/textView6"
@@ -36,23 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Ime"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/studentSurnameInp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Prezime"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/studentUid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="JMBG"
+            android:hint="Ime i prezime"
             android:inputType="textPersonName" />
 
         <EditText
@@ -70,13 +55,6 @@
             android:ems="10"
             android:hint="Početna lozinka"
             android:inputType="textPersonName" />
-        <EditText
-            android:id="@+id/studentRoleInp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="uloga"
-            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/teacherCourseInp"
@@ -86,6 +64,15 @@
             android:hint="Predmet"
             android:inputType="textPersonName"
             android:visibility="gone" />
+        <EditText
+            android:id="@+id/studentGradeInp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Razred"
+            android:inputType="textPersonName"
+            android:visibility="visible" />
+
         <CheckBox
             android:id="@+id/teacherChck"
             android:layout_width="match_parent"
@@ -99,6 +86,12 @@
             android:background="#FFFFFF"
             android:text="Dodaj korisnika"
             app:backgroundTint="@color/green" />
+
+        <TextView
+            android:id="@+id/messageTxt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

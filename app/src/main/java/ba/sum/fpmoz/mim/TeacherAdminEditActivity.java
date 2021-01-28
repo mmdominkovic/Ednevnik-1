@@ -13,16 +13,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import ba.sum.fpmoz.mim.model.Student;
+import ba.sum.fpmoz.mim.model.Teacher;
 
-public class UserAdminEditActivity extends AppCompatActivity {
+public class TeacherAdminEditActivity extends AppCompatActivity {
 
     FirebaseDatabase db;
     DatabaseReference ref;
 
     EditText studentNameEdt;
     EditText studentSurnameEdt;
-    EditText studentUidEdt;
     Button studentEditBtn;
 
     @Override
@@ -32,28 +31,25 @@ public class UserAdminEditActivity extends AppCompatActivity {
 
         this.studentNameEdt = findViewById(R.id.studentNameEdt);
         this.studentSurnameEdt = findViewById(R.id.studentSurnameEdt);
-        this.studentUidEdt = findViewById(R.id.studentUidEdt);
         this.studentEditBtn = findViewById(R.id.studentEditBtn);
 
         final String key = getIntent().getStringExtra("USER_ID");
 
         this.db = FirebaseDatabase.getInstance();
-        this.ref = (DatabaseReference) this.db.getReference("učenici/").child(key);
+        this.ref = this.db.getReference("nastavnici/").child(key);
 
         this.studentEditBtn.setOnClickListener((v) -> {
-            Student s = new Student();
+            Teacher s = new Teacher();
             s.name = studentNameEdt.getText().toString();
-            s.uid = studentUidEdt.getText().toString();
             ref.setValue(s);
 
         });
         this.ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Student student = snapshot.getValue(Student.class);
+                Teacher student = snapshot.getValue(Teacher.class);
                 assert student != null;
                 studentNameEdt.setText(student.name);
-                studentUidEdt.setText(student.uid);
             }
 
             @Override

@@ -6,7 +6,7 @@ public class Class {
     public String subject;
     public String classTeacher;
 
-public Class(){}
+    public Class(){}
     public Class(String level,String name,String subject, String classTeacher) {
         this.level = level;
         this.name = name;

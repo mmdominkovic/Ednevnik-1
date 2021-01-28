@@ -14,28 +14,27 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import ba.sum.fpmoz.mim.R;
-import ba.sum.fpmoz.mim.UserAdminEditActivity;
-import ba.sum.fpmoz.mim.model.Student;
+import ba.sum.fpmoz.mim.TeacherAdminEditActivity;
+import ba.sum.fpmoz.mim.model.Teacher;
 
 
-public class StudentAdapter extends FirebaseRecyclerAdapter<Student, StudentAdapter.StudentViewHolder> {
+public class TeacherAdapter extends FirebaseRecyclerAdapter<Teacher, TeacherAdapter.TeacherViewHolder> {
 
-    public StudentAdapter(@NonNull FirebaseRecyclerOptions<Student> options) {
+    public TeacherAdapter(@NonNull FirebaseRecyclerOptions<Teacher> options) {
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull StudentViewHolder holder, int position, @NonNull Student model) {
+    protected void onBindViewHolder(@NonNull TeacherViewHolder holder, int position, @NonNull Teacher model) {
         holder.studentName.setText(model.getName());
-        holder.studentSurname.setText(model.getEmail());
-        holder.studentUid.setText(model.getUid());
+        holder.studentUid.setText(model.getCourse());
     }
 
     @NonNull
     @Override
-    public StudentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_student_admin, parent, false);
-        StudentViewHolder viewHolder = new StudentAdapter.StudentViewHolder(view);
+    public TeacherViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_teacher_admin, parent, false);
+        TeacherViewHolder viewHolder = new TeacherViewHolder(view);
 
         viewHolder.setOnClickListener(new Adapter.ClickListener() {
             @Override
@@ -51,7 +50,7 @@ public class StudentAdapter extends FirebaseRecyclerAdapter<Student, StudentAdap
         return viewHolder;
     }
 
-    public class StudentViewHolder extends RecyclerView.ViewHolder{
+    public class TeacherViewHolder extends RecyclerView.ViewHolder{
         TextView studentName;
         TextView studentSurname;
         TextView studentUid;
@@ -64,7 +63,7 @@ public class StudentAdapter extends FirebaseRecyclerAdapter<Student, StudentAdap
             this.clickListener = clickListener;
         }
 
-        public StudentViewHolder(@NonNull final View itemView) {
+        public TeacherViewHolder(@NonNull final View itemView) {
             super(itemView);
             studentName = itemView.findViewById(R.id.studentNameTxt);
             studentSurname = itemView.findViewById(R.id.studentSurnameTxt);
@@ -76,7 +75,7 @@ public class StudentAdapter extends FirebaseRecyclerAdapter<Student, StudentAdap
 
             studentEditBtn.setOnClickListener((v) -> {
                 String key = getRef(getAdapterPosition()).getKey();
-                Intent i= new Intent(itemView.getContext(), UserAdminEditActivity.class);
+                Intent i= new Intent(itemView.getContext(), TeacherAdminEditActivity.class);
                 i.putExtra("USER_ID", key);
                 itemView.getContext().startActivity(i);
 } );

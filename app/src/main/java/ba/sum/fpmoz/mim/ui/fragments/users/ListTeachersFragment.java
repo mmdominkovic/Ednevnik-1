@@ -1,4 +1,4 @@
-package ba.sum.fpmoz.mim.ui.fragments.classes;
+package ba.sum.fpmoz.mim.ui.fragments.users;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,29 +16,31 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import ba.sum.fpmoz.mim.R;
-import ba.sum.fpmoz.mim.model.Class;
-import ba.sum.fpmoz.mim.ui.adapters.ClassAdapter;
+import ba.sum.fpmoz.mim.model.Teacher;
+import ba.sum.fpmoz.mim.ui.adapters.TeacherAdapter;
 
 
-public class ListClassFragment extends Fragment {
+public class ListTeachersFragment extends Fragment {
     FirebaseDatabase db;
     DatabaseReference ref;
-    ClassAdapter adapter;
-    RecyclerView classListView;
+    TeacherAdapter adapter;
+    RecyclerView teacherListView;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-      View classListView = inflater.inflate(R.layout.activity_class_list, container, false);
-      this.classListView=classListView.findViewById(R.id.classListView);
-      this.db = FirebaseDatabase.getInstance();
-      this.ref =this.db.getReference("razredi");
-      this.classListView.setLayoutManager(new LinearLayoutManager(getContext()));
+        View userListView = inflater.inflate(R.layout.activity_teacher_list, container, false);
+        this.teacherListView = userListView.findViewById(R.id.studentListView);
+        this.db = FirebaseDatabase.getInstance();
+        this.ref = this.db.getReference("nastavnici");
+        this.teacherListView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-      FirebaseRecyclerOptions<Class> options =new FirebaseRecyclerOptions.Builder<Class>().setQuery(this.ref, Class.class).build();
-      this.adapter = new ClassAdapter(options);
-      this.classListView.setAdapter(this.adapter);
-        return classListView;
+        FirebaseRecyclerOptions<Teacher> options = new FirebaseRecyclerOptions
+                .Builder<Teacher>()
+                .setQuery(this.ref, Teacher.class).build();
+        this.adapter = new TeacherAdapter(options);
+        this.teacherListView.setAdapter(this.adapter);
+        return userListView;
     }
 
     @Override

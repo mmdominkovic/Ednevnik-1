@@ -14,7 +14,6 @@
         <activity android:name=".UserMainActivity" />
         <activity android:name=".TabbedUserAdminActivity"/>
         <activity android:name=".TabbedClassesActivity"/>
-        <activity android:name=".UserAdminActivity" />
         <activity android:name=".ClassAdminActivity"/>
         <activity android:name=".ClassAdminEditActivity"/>
         <activity android:name=".HomeNavigationProfesorActivity"></activity>
