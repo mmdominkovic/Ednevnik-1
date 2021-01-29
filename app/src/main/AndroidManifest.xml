@@ -9,17 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ednevnik">
-        <activity android:name=".TabbedProffesorClassesActivity"></activity>
-        <activity android:name=".TeacherAdminEditActivity" />
-        <activity android:name=".HomeNavigationActivity" />
+        <activity android:name=".HomeNavigationActivity"></activity>
         <activity android:name=".UserAdminEditActivity" />
         <activity android:name=".UserMainActivity" />
-        <activity android:name=".TabbedUserAdminActivity" />
-        <activity android:name=".TabbedClassesActivity" />
-        <activity android:name=".ClassAdminActivity" />
-        <activity android:name=".ClassAdminEditActivity" />
-        <activity android:name=".HomeNavigationProfesorActivity" />
-        <activity android:name=".HomeNavigationStudentActivity" />
+        <activity android:name=".TabbedUserAdminActivity"/>
+        <activity android:name=".TabbedClassesActivity"/>
+        <activity android:name=".ClassAdminActivity"/>
+        <activity android:name=".ClassAdminEditActivity"/>
+        <activity android:name=".HomeNavigationProfesorActivity"></activity>
+        <activity android:name=".HomeNavigationStudentActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
