@@ -1,5 +1,6 @@
 package ba.sum.fpmoz.mim.ui.adapters;
 
+
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import ba.sum.fpmoz.mim.R;
 import ba.sum.fpmoz.mim.TeacherAdminEditActivity;
+import ba.sum.fpmoz.mim.UserAdminEditActivity;
 import ba.sum.fpmoz.mim.model.Teacher;
 
 
@@ -27,6 +29,7 @@ public class TeacherAdapter extends FirebaseRecyclerAdapter<Teacher, TeacherAdap
     @Override
     protected void onBindViewHolder(@NonNull TeacherViewHolder holder, int position, @NonNull Teacher model) {
         holder.studentName.setText(model.getName());
+        holder.studentSurname.setText(model.getEmail());
         holder.studentUid.setText(model.getCourse());
     }
 
@@ -78,11 +81,11 @@ public class TeacherAdapter extends FirebaseRecyclerAdapter<Teacher, TeacherAdap
                 Intent i= new Intent(itemView.getContext(), TeacherAdminEditActivity.class);
                 i.putExtra("USER_ID", key);
                 itemView.getContext().startActivity(i);
-} );
+            } );
             itemView.setOnClickListener((v) -> clickListener.OnClickListener(v, getAdapterPosition()));
             itemView.setOnLongClickListener((v) -> {
                 clickListener.OnClickListener(v, getAdapterPosition());
-                    return true;
+                return true;
             } );
         }
     }
