@@ -72,7 +72,6 @@ public class AddUsersFragment extends Fragment {
         this.studentGradeInp = userAdminView.findViewById(R.id.studentGradeInp);
         this.teacherChck = userAdminView.findViewById(R.id.teacherChck);
         this.messageTxt1 = userAdminView.findViewById(R.id.messageTxt1);
-        
 
         teacherChck.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -34,7 +34,7 @@ private CardView classCardId;
         this.subjectCardId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), TabbedSubjectAdminActivity.class);
+                Intent i = new Intent(getApplicationContext(), TabbedUserAdminActivity.class);
                 startActivity(i);
             }
         });
