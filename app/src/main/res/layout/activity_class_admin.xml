@@ -35,19 +35,11 @@
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/levelClassInp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Razina razreda"
-            android:inputType="textPersonName" />
-
-        <EditText
             android:id="@+id/classNameInp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Odjel"
+            android:hint="Razina razreda"
             android:inputType="textPersonName" />
 
 

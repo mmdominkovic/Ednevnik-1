@@ -37,7 +37,6 @@ public class AddClassFragment extends Fragment {
         this.db = FirebaseDatabase.getInstance();
         this.ref = this.db.getReference("razredi");
 
-        this.levelClassInp = classAdminView.findViewById(R.id.levelClassInp);
         this.classNameInp = classAdminView.findViewById(R.id.classNameInp);
         this.classTeacherInp = classAdminView.findViewById(R.id.classTeacherInp);
         this.subjectInp=classAdminView.findViewById(R.id.subjectInp);
@@ -46,13 +45,12 @@ public class AddClassFragment extends Fragment {
         addClassBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String level = levelClassInp.getText().toString();
+
+                String newClassKey = ref.push().getKey();
                 String className = classNameInp.getText().toString();
                 String classTeacher = classTeacherInp.getText().toString();
-               String subject =subjectInp.getText().toString();
-                ref.push().setValue(
-                        new Class(level,className,subject,classTeacher)
-                );
+               String subject = subjectInp.getText().toString();
+                ref.child(newClassKey).setValue(new Class(newClassKey, className, subject, classTeacher));
                 levelClassInp.setText("");
                 classNameInp.setText("");
                 classTeacherInp.setText("");

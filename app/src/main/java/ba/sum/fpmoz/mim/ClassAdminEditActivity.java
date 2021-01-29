@@ -30,7 +30,6 @@ public class ClassAdminEditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_class_admin_edit);
 
-        this.classLevelEdt=findViewById(R.id.classLevelEdt);
         this.classNameEdt=findViewById(R.id.classNameEdt);
         this.classSubjectEdt=findViewById(R.id.classSubjectEdt);
         this.classTeacherEdt=findViewById(R.id.classTeacherEdt);
@@ -42,7 +41,6 @@ public class ClassAdminEditActivity extends AppCompatActivity {
 
         this.classEditBtn.setOnClickListener((v) ->{
             Class c=new Class();
-            c.level=classLevelEdt.getText().toString();
             c.name=classNameEdt.getText().toString();
             c.subject=classSubjectEdt.getText().toString();
             c.classTeacher=classTeacherEdt.getText().toString();
@@ -55,7 +53,7 @@ public class ClassAdminEditActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Class klass=snapshot.getValue(Class.class);
                 assert klass!=null;
-                classLevelEdt.setText(klass.level);
+                classLevelEdt.setText(klass.uid);
                 classNameEdt.setText(klass.name);
                 classSubjectEdt.setText(klass.subject);
                 classTeacherEdt.setText(klass.classTeacher);
