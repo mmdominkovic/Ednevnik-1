@@ -31,19 +31,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d18851a-b015-421b-af95-686792ebff71" name="Default Changelist" comment="dodavanje korisnika role pregled nastavnika">
+    <list default="true" id="1d18851a-b015-421b-af95-686792ebff71" name="Default Changelist" comment="popravljeni bugovi">
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ClassAdminEditActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ClassAdminEditActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/TeacherAdminEditActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/UserMainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/UserMainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/model/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/model/Class.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/StudentAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/StudentAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/TeacherAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/AddClassFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/AddClassFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/HomeNavigationProfesorActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/HomeNavigationProfesorActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/users/AddUsersFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/users/AddUsersFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_class_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_class_admin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_teacher_admin_edit2.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -380,7 +374,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611851515450</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="popravljeni bugovi">
+      <created>1611944871406</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1611944871406</updated>
+    </task>
+    <task id="LOCAL-00009" summary="popravljeni bugovi">
+      <created>1611944951643</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1611944951643</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -401,7 +409,8 @@
     <MESSAGE value="uredjivanje i brisanje razreda" />
     <MESSAGE value="rade role, upitan edit nije jos view stavljen" />
     <MESSAGE value="dodavanje korisnika role pregled nastavnika" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodavanje korisnika role pregled nastavnika" />
+    <MESSAGE value="popravljeni bugovi" />
+    <option name="LAST_COMMIT_MESSAGE" value="popravljeni bugovi" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="91" key="#Inspections" timestamp="1611269492756">
@@ -525,12 +534,12 @@
     </state>
     <state x="246" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1611491934626" />
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610981869017" />
-    <state x="433" y="158" key="Vcs.Push.Dialog.v2" timestamp="1611851534544">
+    <state x="433" y="158" key="Vcs.Push.Dialog.v2" timestamp="1611944961986">
       <screen x="75" y="0" width="1525" height="900" />
     </state>
     <state x="321" y="128" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1611787452835" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1611343444444" />
-    <state x="433" y="158" key="Vcs.Push.Dialog.v2/75.0.1525.900@75.0.1525.900" timestamp="1611851534544" />
+    <state x="433" y="158" key="Vcs.Push.Dialog.v2/75.0.1525.900@75.0.1525.900" timestamp="1611944961986" />
     <state x="1004" y="194" key="chooseDestDirectoryDialog" timestamp="1611241182025">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

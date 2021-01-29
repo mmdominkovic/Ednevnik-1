@@ -1,15 +1,24 @@
 package ba.sum.fpmoz.mim;
 
-import android.os.Bundle;
-
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+import com.google.android.material.tabs.TabLayout;
 
 public class HomeNavigationProfesorActivity extends AppCompatActivity {
+    private CardView usersCardId;
+    private CardView subjectCardId;
+    private CardView classCardId;
+
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_profesor);
-        setTitle("Dobrodošli profesore");
+        setContentView(R.layout.activity_home_navigation);
+        setTitle("Dobrodošli, profesore.");
     }
 }
