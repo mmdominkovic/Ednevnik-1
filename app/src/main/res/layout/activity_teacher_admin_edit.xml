@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/studentNameEdt"
+            android:id="@+id/teacherNameEdt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -20,7 +20,7 @@
             android:text="Ime" />
 
         <EditText
-            android:id="@+id/studentSurnameEdt"
+            android:id="@+id/teacherSurnameEdt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -29,7 +29,7 @@
 
 
         <Button
-            android:id="@+id/studentEditBtn"
+            android:id="@+id/teacherEditBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Spremi promjene"

@@ -33,7 +33,7 @@ public class TabbedUserAdminActivity extends AppCompatActivity {
         );
 
         this.adapter.addFragment(
-                new AddUsersFragment(), "Korisnici+"
+                new AddUsersFragment(), "➕"
         );
         this.adapter.addFragment(
                 new ListTeachersFragment(), "Nastavnici"

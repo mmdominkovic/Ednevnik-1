@@ -20,38 +20,38 @@ public class TeacherAdminEditActivity extends AppCompatActivity {
     FirebaseDatabase db;
     DatabaseReference ref;
 
-    EditText studentNameEdt;
-    EditText studentSurnameEdt;
-    Button studentEditBtn;
+    EditText teacherNameEdt;
+    EditText teacherSurnameEdt;
+    Button teacherEditBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_admin_edit);
+        setContentView(R.layout.activity_teacher_admin_edit);
 
-        this.studentNameEdt = findViewById(R.id.studentNameEdt);
-        this.studentSurnameEdt = findViewById(R.id.studentSurnameEdt);
-        this.studentEditBtn = findViewById(R.id.studentEditBtn);
+        this.teacherNameEdt = findViewById(R.id.teacherNameEdt);
+        this.teacherSurnameEdt = findViewById(R.id.teacherSurnameEdt);
+        this.teacherEditBtn = findViewById(R.id.teacherEditBtn);
 
-        final String key = getIntent().getStringExtra("USER_ID");
+        final String key = getIntent().getStringExtra("TEACHER_ID");
 
         this.db = FirebaseDatabase.getInstance();
         this.ref = this.db.getReference("nastavnici/").child(key);
 
-        this.studentEditBtn.setOnClickListener((v) -> {
-            Teacher s = new Teacher();
-            s.name = studentNameEdt.getText().toString();
-            s.email = studentSurnameEdt.getText().toString();
-            ref.setValue(s);
+        this.teacherEditBtn.setOnClickListener((v) -> {
+            String name = teacherNameEdt.getText().toString();
+            String email = teacherSurnameEdt.getText().toString();
+            ref.child("name").setValue(name);
+            ref.child("email").setValue(email);
 
         });
         this.ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Teacher student = snapshot.getValue(Teacher.class);
-                assert student != null;
-                studentNameEdt.setText(student.name);
-                studentSurnameEdt.setText(student.email);
+                if(snapshot.exists()){
+                    Teacher student = snapshot.getValue(Teacher.class);
+                    teacherNameEdt.setText(student.name);
+                    teacherSurnameEdt.setText(student.email);}
             }
 
             @Override

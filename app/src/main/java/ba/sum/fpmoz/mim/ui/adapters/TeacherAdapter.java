@@ -28,9 +28,9 @@ public class TeacherAdapter extends FirebaseRecyclerAdapter<Teacher, TeacherAdap
 
     @Override
     protected void onBindViewHolder(@NonNull TeacherViewHolder holder, int position, @NonNull Teacher model) {
-        holder.studentName.setText(model.getName());
-        holder.studentSurname.setText(model.getEmail());
-        holder.studentUid.setText(model.getCourse());
+        holder.teacherName.setText(model.getName());
+        holder.teacherSurname.setText(model.getEmail());
+        holder.teacherUid.setText(model.getCourse());
     }
 
     @NonNull
@@ -54,11 +54,11 @@ public class TeacherAdapter extends FirebaseRecyclerAdapter<Teacher, TeacherAdap
     }
 
     public class TeacherViewHolder extends RecyclerView.ViewHolder{
-        TextView studentName;
-        TextView studentSurname;
-        TextView studentUid;
-        Button studentEditBtn;
-        Button studentDeleteBtn;
+        TextView teacherName;
+        TextView teacherSurname;
+        TextView teacherUid;
+        Button teacherEditBtn;
+        Button teacherDeleteBtn;
 
         Adapter.ClickListener clickListener;
 
@@ -68,18 +68,18 @@ public class TeacherAdapter extends FirebaseRecyclerAdapter<Teacher, TeacherAdap
 
         public TeacherViewHolder(@NonNull final View itemView) {
             super(itemView);
-            studentName = itemView.findViewById(R.id.studentNameTxt);
-            studentSurname = itemView.findViewById(R.id.studentSurnameTxt);
-            studentUid = itemView.findViewById(R.id.studentUidTxt);
-            studentEditBtn = itemView.findViewById(R.id.studentEditBtn);
-            studentDeleteBtn = itemView.findViewById(R.id.studentDeleteBtn);
+            teacherName = itemView.findViewById(R.id.teacherNameTxt);
+            teacherSurname = itemView.findViewById(R.id.teacherSurnameTxt);
+            teacherUid = itemView.findViewById(R.id.teacherUidTxt);
+            teacherEditBtn = itemView.findViewById(R.id.teacherEditBtn);
+            teacherDeleteBtn = itemView.findViewById(R.id.teacherDeleteBtn);
 
-            studentDeleteBtn.setOnClickListener(v -> getRef(getAdapterPosition()).removeValue());
+            teacherDeleteBtn.setOnClickListener(v -> getRef(getAdapterPosition()).removeValue());
 
-            studentEditBtn.setOnClickListener((v) -> {
+            teacherEditBtn.setOnClickListener((v) -> {
                 String key = getRef(getAdapterPosition()).getKey();
                 Intent i= new Intent(itemView.getContext(), TeacherAdminEditActivity.class);
-                i.putExtra("USER_ID", key);
+                i.putExtra("TEACHER_ID", key);
                 itemView.getContext().startActivity(i);
             } );
             itemView.setOnClickListener((v) -> clickListener.OnClickListener(v, getAdapterPosition()));

@@ -56,14 +56,25 @@
             android:hint="Početna lozinka"
             android:inputType="textPersonName" />
 
-        <EditText
-            android:id="@+id/teacherCourseInp"
+        <TextView
+            android:id="@+id/spinnerTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:text="odaberi predmet"
+            android:visibility="gone"
+            />
+
+        <Spinner
+            android:id="@+id/spinnerNasPred"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Predmet"
-            android:inputType="textPersonName"
-            android:visibility="gone" />
+            android:visibility="gone"
+            />
+
         <EditText
             android:id="@+id/studentGradeInp"
             android:layout_width="match_parent"

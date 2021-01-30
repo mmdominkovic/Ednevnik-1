@@ -5,15 +5,25 @@ public class Teacher {
     public String name;
     public String email;
     public String course;
+    public String uidPredmeta;
 
     public Teacher() {
     }
 
-    public Teacher (String uid, String email, String name, String course) {
+    public Teacher (String uid, String email, String name, String course,String uidPredmeta) {
         this.uid = uid;
         this.name = name;
         this.email = email;
         this.course = course;
+        this.uidPredmeta=uidPredmeta;
+    }
+
+    public String getUidPredmeta() {
+        return uidPredmeta;
+    }
+
+    public void setUidPredmeta(String uidPredmeta) {
+        this.uidPredmeta = uidPredmeta;
     }
 
     public String getUid() {

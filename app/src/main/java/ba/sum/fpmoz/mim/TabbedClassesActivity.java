@@ -22,16 +22,16 @@ TabbedAdapter adapter;
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabbed_classes);
-        setTitle("Administracija Razreda");
+        setTitle("Administracija razreda");
         this.layout=findViewById(R.id.classesTabLayout);
         this.pager=findViewById(R.id.classesViewPager);
         this.adapter= new TabbedAdapter(getSupportFragmentManager(), 1);
 
         this.adapter.addFragment(
-                new ListClassFragment(), "Prikaz razreda"
+                new ListClassFragment(), "Svi razredi"
         );
         this.adapter.addFragment(
-                new AddClassFragment(), "Dodavanje razreda"
+                new AddClassFragment(), "Moji razredi"
         );
 
         this.pager.setAdapter(this.adapter);

@@ -10,9 +10,9 @@ import android.view.View;
 import com.google.android.material.tabs.TabLayout;
 
 public class HomeNavigationActivity extends AppCompatActivity {
-private CardView usersCardId;
-private CardView subjectCardId;
-private CardView classCardId;
+    private CardView usersCardId;
+    private CardView subjectCardId;
+    private CardView classCardId;
 
 
     @Override
@@ -34,7 +34,7 @@ private CardView classCardId;
         this.subjectCardId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), TabbedUserAdminActivity.class);
+                Intent i = new Intent(getApplicationContext(), TabbedSubjectsActivity.class);
                 startActivity(i);
             }
         });

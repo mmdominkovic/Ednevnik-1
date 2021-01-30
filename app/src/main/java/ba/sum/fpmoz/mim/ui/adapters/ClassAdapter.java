@@ -14,11 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.textfield.TextInputEditText;
-
 import ba.sum.fpmoz.mim.ClassAdminEditActivity;
 import ba.sum.fpmoz.mim.R;
-import ba.sum.fpmoz.mim.UserAdminEditActivity;
 import ba.sum.fpmoz.mim.model.Class;
+
 public class ClassAdapter extends FirebaseRecyclerAdapter<Class, ClassAdapter.ClassViewHolder> {
 
     public ClassAdapter(@NonNull FirebaseRecyclerOptions<Class>options){
@@ -73,8 +72,6 @@ public class ClassAdapter extends FirebaseRecyclerAdapter<Class, ClassAdapter.Cl
             super(itemView);
             className=itemView.findViewById(R.id.classNameTxt);
             classSubject=itemView.findViewById(R.id.classPredmetTxt);
-            classTeacher=itemView.findViewById(R.id.classProfesorTxt);
-            classLevel=itemView.findViewById(R.id.classGodinaTxt);
             classEditBtn=itemView.findViewById(R.id.classEditBtn);
             classDeleteBtn=itemView.findViewById(R.id.classDeleteBtn);
 

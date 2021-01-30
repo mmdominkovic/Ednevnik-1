@@ -30,7 +30,7 @@ public class ListTeachersFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View userListView = inflater.inflate(R.layout.activity_teacher_list, container, false);
-        this.teacherListView = userListView.findViewById(R.id.studentListView);
+        this.teacherListView = userListView.findViewById(R.id.teacherListView);
         this.db = FirebaseDatabase.getInstance();
         this.ref = this.db.getReference("nastavnici");
         this.teacherListView.setLayoutManager(new LinearLayoutManager(getContext()));

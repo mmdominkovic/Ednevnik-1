@@ -14,6 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import ba.sum.fpmoz.mim.model.Student;
+import ba.sum.fpmoz.mim.model.Teacher;
 
 public class UserAdminEditActivity extends AppCompatActivity {
 
@@ -24,6 +25,8 @@ public class UserAdminEditActivity extends AppCompatActivity {
     EditText studentSurnameEdt;
     EditText studentUidEdt;
     Button studentEditBtn;
+    String email1;
+    String grade1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,28 +39,29 @@ public class UserAdminEditActivity extends AppCompatActivity {
         this.studentEditBtn = findViewById(R.id.studentEditBtn);
 
         final String key = getIntent().getStringExtra("USER_ID");
-
         this.db = FirebaseDatabase.getInstance();
         this.ref = (DatabaseReference) this.db.getReference("učenici/").child(key);
 
-        this.studentEditBtn.setOnClickListener((v) -> {
-            Student s = new Student();
-            s.name = studentNameEdt.getText().toString();
-            s.uid = studentUidEdt.getText().toString();
-            ref.setValue(s);
-
-        });
         this.ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                Student student = snapshot.getValue(Student.class);
-                assert student != null;
-                studentNameEdt.setText(student.name);
-                studentUidEdt.setText(student.uid);
+                if(snapshot.exists()){
+                    Student student = snapshot.getValue(Student.class);
+                    studentNameEdt.setText(student.name);
+                    studentUidEdt.setText(student.email);
+                }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {}
         });
+
+
+        this.studentEditBtn.setOnClickListener((v) -> {
+            email1=studentNameEdt.getText().toString();
+            grade1=studentUidEdt.getText().toString();
+            ref.child("name").setValue(email1);
+
+        });
+
     }
 }

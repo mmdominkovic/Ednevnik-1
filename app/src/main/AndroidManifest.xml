@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ednevnik">
-        <activity android:name=".TeacherAdminEditActivity"></activity>
+        <activity android:name=".TabbedProfesorClassesActivity" />
+        <activity android:name=".TabbedSubjectsActivity" />
+        <activity android:name=".SubjectAdminEditActivity" />
+        <activity android:name=".TabbedProfesorUsersActivity" />
+        <activity android:name=".TeacherAdminEditActivity" />
         <activity android:name=".HomeNavigationActivity" />
         <activity android:name=".UserAdminEditActivity" />
         <activity android:name=".UserMainActivity" />

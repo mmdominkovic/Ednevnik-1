@@ -31,6 +31,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import ba.sum.fpmoz.mim.R;
@@ -40,38 +41,84 @@ import ba.sum.fpmoz.mim.model.Teacher;
 import ba.sum.fpmoz.mim.model.User;
 
 
-public class AddUsersFragment extends Fragment {
+public class AddUsersFragment extends Fragment{
 
     private FirebaseAuth mAuth;
     FirebaseDatabase db;
-    DatabaseReference ref, stu, nas, raz;
+    DatabaseReference ref, stu, nas, pred;
     EditText studentNameInp;
     EditText studentEmailInp;
     EditText studentPasswordInp, teacherCourseInp, studentGradeInp;
     CheckBox teacherChck;
     Button addStudentBtn;
     TextView messageTxt1;
-    Spinner spinner;
+    Spinner spinnerNasPred;
+    TextView spinnerTxt;
+    String item;
+    List<String> predmetno;
+    String selectedItem;
+    HashMap<String,String> predmetiUid=new HashMap<String,String>();
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mAuth = FirebaseAuth.getInstance();
         final View userAdminView = inflater.inflate(R.layout.activity_user_admin, container, false);
-
+        this.spinnerTxt=userAdminView.findViewById(R.id.spinnerTxt);
         this.db = FirebaseDatabase.getInstance();
         this.ref = this.db.getReference("korisnici");
         this.nas = this.db.getReference("nastavnici");
         this.stu = this.db.getReference("učenici");
+        this.pred=this.db.getReference("predmeti");
+        predmetno=new ArrayList<>();
+
+        pred.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                final List<String >predmeti=new ArrayList<String>();
+                for(DataSnapshot ds:snapshot.getChildren()){
+                    String prvi=ds.child("name").getValue().toString();
+                    String drugi=ds.child("uid").getValue().toString();
+                    predmetno.add(prvi);
+                    predmeti.add(prvi);
+                    predmetiUid.put(prvi,drugi);
+                }
+                spinnerNasPred=userAdminView.findViewById(R.id.spinnerNasPred);
+                final ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item,predmeti);
+                arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnerNasPred.setAdapter(arrayAdapter);
+                spinnerNasPred.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        selectedItem=arrayAdapter.getItem(position);
+                        spinnerTxt.setText(selectedItem);
+
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+                spinnerTxt.setText(selectedItem);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         this.studentNameInp = userAdminView.findViewById(R.id.studentNameInp);
         this.studentEmailInp = userAdminView.findViewById(R.id.studentEmailInp);
         this.studentPasswordInp = userAdminView.findViewById(R.id.studentPasswordInp);
         this.addStudentBtn = userAdminView.findViewById(R.id.addStudentBtn);
-        this.teacherCourseInp = userAdminView.findViewById(R.id.teacherCourseInp);
         this.studentGradeInp = userAdminView.findViewById(R.id.studentGradeInp);
         this.teacherChck = userAdminView.findViewById(R.id.teacherChck);
         this.messageTxt1 = userAdminView.findViewById(R.id.messageTxt1);
+        this.spinnerTxt=userAdminView.findViewById(R.id.spinnerTxt);
+
 
         teacherChck.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,16 +126,19 @@ public class AddUsersFragment extends Fragment {
 
                 if(((CheckBox)v).isChecked())
                 {
-                    teacherCourseInp.setVisibility(View.VISIBLE);
+                    spinnerTxt.setVisibility(View.VISIBLE);
+                    spinnerNasPred.setVisibility(View.VISIBLE);
                     studentGradeInp.setVisibility(View.GONE);
                 }
                 else
                 {
-                    teacherCourseInp.setVisibility(View.GONE);
+                    spinnerTxt.setVisibility(View.GONE);
+                    spinnerNasPred.setVisibility(View.GONE);
                     studentGradeInp.setVisibility(View.VISIBLE);
                 }
             }
         });
+
 
         this.addStudentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,8 +146,9 @@ public class AddUsersFragment extends Fragment {
                 final String displayName = studentNameInp.getText().toString();
                 String email = studentEmailInp.getText().toString();
                 String password = studentPasswordInp.getText().toString();
-                String course = teacherCourseInp.getText().toString();
+                String course = selectedItem;
                 String grade = studentGradeInp.getText().toString();
+                String uidpred=predmetiUid.get(selectedItem);
 
                 if(teacherChck.isChecked()){
                     mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
@@ -117,12 +168,12 @@ public class AddUsersFragment extends Fragment {
                                     User newUser = new User(user.getUid(), user.getEmail(), user.getDisplayName(), role);
                                     ref.child(user.getUid()).setValue(newUser);
                                     String id = ref.child(user.getUid()).setValue(newUser).toString();
-                                    Teacher t = new Teacher(user.getUid(), user.getEmail(), user.getDisplayName(), course);
+                                    Teacher t = new Teacher(user.getUid(), user.getEmail(), user.getDisplayName(), course,uidpred);
                                     nas.child(user.getUid()).setValue(t);
                                 }
                             });
                         } else {
-                            Toast.makeText(getContext(), "Nastala je greška pri dodavanju korisnika: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(getContext(), "Nastala je greška pri dodoavanju korisnika: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                         }
                     });
                 } else {
