@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:ems="10"
-            android:text="odaberi predmet"
+            android:text="Odaberite predmet"
             android:visibility="gone"
             />
 
@@ -75,14 +75,23 @@
             android:visibility="gone"
             />
 
-        <EditText
-            android:id="@+id/studentGradeInp"
+
+        <TextView
+            android:id="@+id/spinnerTxt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:text="Odaberite razred"
+            />
+
+        <Spinner
+            android:id="@+id/spinnerStudRaz"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Razred"
-            android:inputType="textPersonName"
-            android:visibility="visible" />
+            />
 
         <CheckBox
             android:id="@+id/teacherChck"

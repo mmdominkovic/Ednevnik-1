@@ -36,17 +36,25 @@
                 android:id="@+id/subjectAddBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="Uredi razred"
+                android:text="Dodaj"
                 app:backgroundTint="@color/green" />
 
             <Button
                 android:id="@+id/subjectDeleteBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="Obrisi"
-                app:backgroundTint="@color/green"/>
+                android:text="Ukloni"
+                app:backgroundTint="@color/green" />
         </LinearLayout>
 
     </LinearLayout>

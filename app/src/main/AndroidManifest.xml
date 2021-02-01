@@ -15,6 +15,7 @@
         <activity android:name=".TabbedProfesorUsersActivity" />
         <activity android:name=".TeacherAdminEditActivity" />
         <activity android:name=".HomeNavigationActivity" />
+        <activity android:name=".AddSubjects" />
         <activity android:name=".UserAdminEditActivity" />
         <activity android:name=".UserMainActivity" />
         <activity android:name=".TabbedUserAdminActivity" />

@@ -31,7 +31,7 @@ TabbedAdapter adapter;
                 new ListClassFragment(), "Svi razredi"
         );
         this.adapter.addFragment(
-                new AddClassFragment(), "Moji razredi"
+                new AddClassFragment(), "Dodaj razred"
         );
 
         this.pager.setAdapter(this.adapter);

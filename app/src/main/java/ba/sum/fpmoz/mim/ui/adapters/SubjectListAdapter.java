@@ -16,22 +16,22 @@ import ba.sum.fpmoz.mim.R;
 import ba.sum.fpmoz.mim.SubjectAdminEditActivity;
 import ba.sum.fpmoz.mim.model.Subject;
 
-public class SubjectAdapter extends FirebaseRecyclerAdapter<Subject, SubjectAdapter.SubjectViewHolder> {
-    public SubjectAdapter(@NonNull FirebaseRecyclerOptions<Subject>options){
+public class SubjectListAdapter extends FirebaseRecyclerAdapter<Subject, SubjectListAdapter.SubjectListViewHolder> {
+    public SubjectListAdapter(@NonNull FirebaseRecyclerOptions<Subject>options){
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull SubjectAdapter.SubjectViewHolder holder, int position, @NonNull Subject model) {
+    protected void onBindViewHolder(@NonNull SubjectListViewHolder holder, int position, @NonNull Subject model) {
         holder.subjectName.setText(model.getName());
     }
 
 
     @NonNull
     @Override
-    public SubjectAdapter.SubjectViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_subject_admin,parent,false);
-        SubjectViewHolder viewHolder = new SubjectViewHolder(view);
+    public SubjectListAdapter.SubjectListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_subject_to_class_admin,parent,false);
+        SubjectListViewHolder viewHolder = new SubjectListViewHolder(view);
 
         viewHolder.setOnClickListener(new Adapter.ClickListener(){
 
@@ -47,28 +47,27 @@ public class SubjectAdapter extends FirebaseRecyclerAdapter<Subject, SubjectAdap
         });
         return viewHolder;
     }
-    public class SubjectViewHolder extends RecyclerView.ViewHolder{
+    public class SubjectListViewHolder extends RecyclerView.ViewHolder{
         TextView subjectName;
-        Button subjectEditBtn, subjectDeleteBtn;
+        Button subjectAddBtn, subjectDeleteBtn;
         Adapter.ClickListener clickListener;
 
         public void setOnClickListener(Adapter.ClickListener clickListener){
             this.clickListener = clickListener;
         }
 
-        public SubjectViewHolder(@NonNull View itemView){
+        public SubjectListViewHolder(@NonNull View itemView){
             super(itemView);
             subjectName=itemView.findViewById(R.id.subjectNameTxt);
-            subjectEditBtn=itemView.findViewById(R.id.subjectAddBtn);
+            subjectAddBtn=itemView.findViewById(R.id.subjectAddBtn);
             subjectDeleteBtn=itemView.findViewById(R.id.subjectDeleteBtn);
 
             subjectDeleteBtn.setOnClickListener(v -> getRef(getAdapterPosition()).removeValue());
 
-            subjectEditBtn.setOnClickListener((v) -> {
+            subjectAddBtn.setOnClickListener((v) -> {
                 String key = getRef(getAdapterPosition()).getKey();
-                Intent i= new Intent(itemView.getContext(), SubjectAdminEditActivity.class);
-                i.putExtra("SUBJECT_ID", key);
-                itemView.getContext().startActivity(i);
+                String uidpred = key;
+                
             } );
 
             itemView.setOnClickListener((v)->{

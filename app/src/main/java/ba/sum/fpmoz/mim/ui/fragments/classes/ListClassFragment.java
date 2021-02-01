@@ -29,15 +29,15 @@ public class ListClassFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-      View classListView = inflater.inflate(R.layout.activity_class_list, container, false);
-      this.classListView=classListView.findViewById(R.id.classListView);
-      this.db = FirebaseDatabase.getInstance();
-      this.ref =this.db.getReference("razredi");
-      this.classListView.setLayoutManager(new LinearLayoutManager(getContext()));
+        View classListView = inflater.inflate(R.layout.activity_class_list, container, false);
+        this.classListView=classListView.findViewById(R.id.classListView);
+        this.db = FirebaseDatabase.getInstance();
+        this.ref =this.db.getReference("razredi");
+        this.classListView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-      FirebaseRecyclerOptions<Class> options =new FirebaseRecyclerOptions.Builder<Class>().setQuery(this.ref, Class.class).build();
-      this.adapter = new ClassAdapter(options);
-      this.classListView.setAdapter(this.adapter);
+        FirebaseRecyclerOptions<Class> options =new FirebaseRecyclerOptions.Builder<Class>().setQuery(this.ref, Class.class).build();
+        this.adapter = new ClassAdapter(options);
+        this.classListView.setAdapter(this.adapter);
         return classListView;
     }
 

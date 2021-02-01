@@ -1,5 +1,6 @@
 package ba.sum.fpmoz.mim.ui.fragments.classes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,9 @@ import androidx.fragment.app.Fragment;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import ba.sum.fpmoz.mim.AddSubjects;
+import ba.sum.fpmoz.mim.ClassAdminEditActivity;
+import ba.sum.fpmoz.mim.HomeNavigationProfesorActivity;
 import ba.sum.fpmoz.mim.R;
 import ba.sum.fpmoz.mim.model.Class;
 
@@ -22,10 +26,7 @@ import ba.sum.fpmoz.mim.model.Class;
 public class AddClassFragment extends Fragment {
     FirebaseDatabase db;
     DatabaseReference ref;
-    EditText levelClassInp;
     EditText classNameInp;
-    EditText classTeacherInp;
-    EditText subjectInp;
     Button addClassBtn;
 
     @Nullable
@@ -38,8 +39,6 @@ public class AddClassFragment extends Fragment {
         this.ref = this.db.getReference("razredi");
 
         this.classNameInp = classAdminView.findViewById(R.id.classNameInp);
-        this.classTeacherInp = classAdminView.findViewById(R.id.classTeacherInp);
-        this.subjectInp=classAdminView.findViewById(R.id.subjectInp);
         this.addClassBtn = classAdminView.findViewById(R.id.AddClassBtn);
 
         addClassBtn.setOnClickListener(new View.OnClickListener() {
@@ -48,17 +47,17 @@ public class AddClassFragment extends Fragment {
 
                 String newClassKey = ref.push().getKey();
                 String className = classNameInp.getText().toString();
-                String classTeacher = classTeacherInp.getText().toString();
-               String subject = subjectInp.getText().toString();
-                ref.child(newClassKey).setValue(new Class(newClassKey, className, subject, classTeacher));
-                levelClassInp.setText("");
+                ref.child(newClassKey).setValue(new Class(newClassKey, className));
                 classNameInp.setText("");
-                classTeacherInp.setText("");
-                subjectInp.setText("");
 
+                String key = newClassKey;
+                Intent i = new Intent(getContext(), AddSubjects.class);
+                i.putExtra("CLASS_ID", key);
 
                 Toast.makeText(classAdminView.getContext(),
                         "Uspješno ste dodali razred",Toast.LENGTH_LONG).show();
+
+                startActivity(i);
 
             }
         });

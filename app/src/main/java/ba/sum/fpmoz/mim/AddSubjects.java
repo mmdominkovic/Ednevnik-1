@@ -1,4 +1,4 @@
-package ba.sum.fpmoz.mim.ui.fragments.subjects;
+package ba.sum.fpmoz.mim;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,32 +10,33 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import ba.sum.fpmoz.mim.R;
 import ba.sum.fpmoz.mim.model.Subject;
 
 
-public class AddSubjectFragment extends Fragment {
+public class AddSubjects extends AppCompatActivity {
     FirebaseDatabase db;
     DatabaseReference ref;
     EditText subjectNameInp;
     Button addSubjectBtn;
 
-    @Nullable
+
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final View subjectAdminView = inflater.inflate(R.layout.activity_subject_admin,container,false);
+        setContentView(R.layout.add_subjects_to_class);
 
-        this.db = FirebaseDatabase.getInstance();
-        this.ref = this.db.getReference("predmeti");
+        final String key=getIntent().getStringExtra("CLASS_ID");
+        this.db=FirebaseDatabase.getInstance();
+        this.ref=this.db.getReference("razredi/").child(key).child("predmeti");
 
-        this.subjectNameInp = subjectAdminView.findViewById(R.id.subjectNameInp);
-        this.addSubjectBtn = subjectAdminView.findViewById(R.id.AddSubjectBtn);
+        this.subjectNameInp = findViewById(R.id.subjectNameInp);
+        this.addSubjectBtn = findViewById(R.id.AddSubjectBtn);
 
         addSubjectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,12 +46,11 @@ public class AddSubjectFragment extends Fragment {
                 String subjectName = subjectNameInp.getText().toString();
                 ref.child(newSubjectKey).setValue(new Subject(newSubjectKey, subjectName, id_nastavnika ));
                 subjectNameInp.setText("");
-                Toast.makeText(subjectAdminView.getContext(),
+                Toast.makeText(AddSubjects.this,
                         "Uspješno ste dodali predmet",Toast.LENGTH_LONG).show();
 
             }
         });
-        return subjectAdminView;
 
     }
 

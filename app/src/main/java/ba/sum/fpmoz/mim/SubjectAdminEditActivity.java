@@ -5,7 +5,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
@@ -15,7 +14,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import ba.sum.fpmoz.mim.model.Subject;
-import ba.sum.fpmoz.mim.model.Teacher;
 
 public class SubjectAdminEditActivity extends AppCompatActivity {
     FirebaseDatabase db;
@@ -29,7 +27,7 @@ public class SubjectAdminEditActivity extends AppCompatActivity {
         setContentView(R.layout.activity_subject_admin_edit);
 
         this.subjectNameEdt = findViewById(R.id.subjectNameEdt);
-        this.subjectEditBtn = findViewById(R.id.subjectEditBtn);
+        this.subjectEditBtn = findViewById(R.id.subjectAddBtn);
 
         final String key = getIntent().getStringExtra("SUBJECT_ID");
 

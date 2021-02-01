@@ -39,25 +39,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Razina razreda"
+            android:hint="Npr: 1a"
             android:inputType="textPersonName" />
 
 
-        <EditText
-            android:id="@+id/classTeacherInp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Razrednik"
-            android:inputType="textPersonName" />
 
-        <EditText
-            android:id="@+id/subjectInp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Predmet"
-            android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/AddClassBtn"

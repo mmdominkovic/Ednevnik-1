@@ -1,7 +1,6 @@
 package ba.sum.fpmoz.mim.ui.fragments.users;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,10 +16,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
@@ -45,19 +40,21 @@ public class AddUsersFragment extends Fragment{
 
     private FirebaseAuth mAuth;
     FirebaseDatabase db;
-    DatabaseReference ref, stu, nas, pred;
+    DatabaseReference ref, stu, nas, pred, raz;
     EditText studentNameInp;
     EditText studentEmailInp;
-    EditText studentPasswordInp, teacherCourseInp, studentGradeInp;
+    EditText studentPasswordInp;
     CheckBox teacherChck;
     Button addStudentBtn;
     TextView messageTxt1;
-    Spinner spinnerNasPred;
-    TextView spinnerTxt;
-    String item;
+    Spinner spinnerNasPred, spinnerStuRaz;
+    TextView spinnerTxt, spinnerTxt2;
+    String item, item2;
     List<String> predmetno;
-    String selectedItem;
+    List<String> razredno;
+    String selectedItem, selectedItem2;
     HashMap<String,String> predmetiUid=new HashMap<String,String>();
+    HashMap<String,String> razrediUid=new HashMap<String,String>();
 
 
     @Nullable
@@ -71,7 +68,9 @@ public class AddUsersFragment extends Fragment{
         this.nas = this.db.getReference("nastavnici");
         this.stu = this.db.getReference("učenici");
         this.pred=this.db.getReference("predmeti");
+        this.raz=this.db.getReference("razredi");
         predmetno=new ArrayList<>();
+        razredno=new ArrayList<>();
 
         pred.addValueEventListener(new ValueEventListener() {
             @Override
@@ -98,10 +97,47 @@ public class AddUsersFragment extends Fragment{
 
                     @Override
                     public void onNothingSelected(AdapterView<?> parent) {
-
                     }
                 });
                 spinnerTxt.setText(selectedItem);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+        raz.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                final List<String> razredi = new ArrayList<String>();
+                for(DataSnapshot ds:snapshot.getChildren()){
+                    String prvi=ds.child("name").getValue().toString();
+                    String drugi=ds.child("uid").getValue().toString();
+                    razredno.add(prvi);
+                    razredi.add(prvi );
+                    razrediUid.put(prvi,drugi);
+                }
+                spinnerStuRaz=userAdminView.findViewById(R.id.spinnerStudRaz);
+                final ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_dropdown_item, razredi);
+                arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnerStuRaz.setAdapter(arrayAdapter);
+                spinnerStuRaz.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        selectedItem2=arrayAdapter.getItem(position);
+                        spinnerTxt2.setText(selectedItem2);
+
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+
+                    }
+                });
+                spinnerTxt2.setText(selectedItem2);
             }
 
             @Override
@@ -114,10 +150,10 @@ public class AddUsersFragment extends Fragment{
         this.studentEmailInp = userAdminView.findViewById(R.id.studentEmailInp);
         this.studentPasswordInp = userAdminView.findViewById(R.id.studentPasswordInp);
         this.addStudentBtn = userAdminView.findViewById(R.id.addStudentBtn);
-        this.studentGradeInp = userAdminView.findViewById(R.id.studentGradeInp);
         this.teacherChck = userAdminView.findViewById(R.id.teacherChck);
         this.messageTxt1 = userAdminView.findViewById(R.id.messageTxt1);
         this.spinnerTxt=userAdminView.findViewById(R.id.spinnerTxt);
+        this.spinnerTxt2=userAdminView.findViewById(R.id.spinnerTxt2);
 
 
         teacherChck.setOnClickListener(new View.OnClickListener() {
@@ -128,13 +164,18 @@ public class AddUsersFragment extends Fragment{
                 {
                     spinnerTxt.setVisibility(View.VISIBLE);
                     spinnerNasPred.setVisibility(View.VISIBLE);
-                    studentGradeInp.setVisibility(View.GONE);
+
+                    spinnerTxt2.setVisibility(View.GONE);
+                    spinnerStuRaz.setVisibility(View.GONE);
                 }
                 else
                 {
                     spinnerTxt.setVisibility(View.GONE);
                     spinnerNasPred.setVisibility(View.GONE);
-                    studentGradeInp.setVisibility(View.VISIBLE);
+
+                    spinnerTxt2.setVisibility(View.VISIBLE);
+                    spinnerStuRaz.setVisibility(View.VISIBLE);
+
                 }
             }
         });
@@ -147,8 +188,8 @@ public class AddUsersFragment extends Fragment{
                 String email = studentEmailInp.getText().toString();
                 String password = studentPasswordInp.getText().toString();
                 String course = selectedItem;
-                String grade = studentGradeInp.getText().toString();
                 String uidpred=predmetiUid.get(selectedItem);
+                String uidraz=razrediUid.get(selectedItem2);
 
                 if(teacherChck.isChecked()){
                     mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
@@ -168,7 +209,7 @@ public class AddUsersFragment extends Fragment{
                                     User newUser = new User(user.getUid(), user.getEmail(), user.getDisplayName(), role);
                                     ref.child(user.getUid()).setValue(newUser);
                                     String id = ref.child(user.getUid()).setValue(newUser).toString();
-                                    Teacher t = new Teacher(user.getUid(), user.getEmail(), user.getDisplayName(), course,uidpred);
+                                    Teacher t = new Teacher(user.getUid(), user.getEmail(), user.getDisplayName(), course, uidpred);
                                     nas.child(user.getUid()).setValue(t);
                                 }
                             });
@@ -194,8 +235,11 @@ public class AddUsersFragment extends Fragment{
                                     User newUser = new User(user.getUid(), user.getEmail(), user.getDisplayName(), role);
                                     ref.child(user.getUid()).setValue(newUser);
                                     String id = ref.child(user.getUid()).setValue(newUser).toString();
-                                    Student s = new Student(user.getUid(), user.getEmail(), user.getDisplayName(), grade);
+                                    Student s = new Student(user.getUid(), user.getEmail(), user.getDisplayName(), "");
                                     stu.child(user.getUid()).setValue(s);
+                                    raz.child("učenici");
+                                    raz.child(uidraz).child("učenici").child(user.getUid()).setValue(user.getUid());
+                                    raz.child(uidraz).child("učenici").child(user.getUid()).setValue(user.getDisplayName());
                                 }
                             });
                         } else {

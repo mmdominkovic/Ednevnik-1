@@ -25,7 +25,6 @@ public class ClassAdapterForProfesors extends FirebaseRecyclerAdapter<Class, Cla
     @Override
     protected void onBindViewHolder(@NonNull ClassAdapterForProfesors.ClassViewHolder holder, int position, @NonNull Class model) {
         holder.className.setText(model.getName());
-        holder.classSubject.setText(model.getSubject());
     }
 
 
@@ -52,8 +51,6 @@ public class ClassAdapterForProfesors extends FirebaseRecyclerAdapter<Class, Cla
     public class ClassViewHolder extends RecyclerView.ViewHolder{
         TextView className;
         TextView classSubject;
-        TextView classTeacher;
-        TextView classLevel;
         Button classDeleteBtn;
         Button classEditBtn;
 
