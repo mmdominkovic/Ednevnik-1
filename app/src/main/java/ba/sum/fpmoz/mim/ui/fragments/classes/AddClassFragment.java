@@ -17,8 +17,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import ba.sum.fpmoz.mim.AddSubjects;
-import ba.sum.fpmoz.mim.ClassAdminEditActivity;
-import ba.sum.fpmoz.mim.HomeNavigationProfesorActivity;
 import ba.sum.fpmoz.mim.R;
 import ba.sum.fpmoz.mim.model.Class;
 

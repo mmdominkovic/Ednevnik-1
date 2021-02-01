@@ -1,6 +1,7 @@
 package ba.sum.fpmoz.mim.ui.fragments.users;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,12 +36,14 @@ import ba.sum.fpmoz.mim.model.Student;
 import ba.sum.fpmoz.mim.model.Teacher;
 import ba.sum.fpmoz.mim.model.User;
 
+import static android.content.ContentValues.TAG;
+
 
 public class AddUsersFragment extends Fragment{
 
     private FirebaseAuth mAuth;
     FirebaseDatabase db;
-    DatabaseReference ref, stu, nas, pred, raz;
+    DatabaseReference ref, stu, nas, pred, raz, pred2;
     EditText studentNameInp;
     EditText studentEmailInp;
     EditText studentPasswordInp;
@@ -240,6 +243,27 @@ public class AddUsersFragment extends Fragment{
                                     raz.child("učenici");
                                     raz.child(uidraz).child("učenici").child(user.getUid()).setValue(user.getUid());
                                     raz.child(uidraz).child("učenici").child(user.getUid()).setValue(user.getDisplayName());
+
+                                    pred2 = raz.child(uidraz).child("predmeti");
+                                    pred2.addValueEventListener(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(DataSnapshot dataSnapshot) {
+
+                                            for (DataSnapshot childDataSnapshot : dataSnapshot.getChildren()) {
+                                                Log.v(TAG,""+ childDataSnapshot.getKey());
+                                                Log.v(TAG,""+ childDataSnapshot.child("name").getValue());
+
+                                                String key = childDataSnapshot.getKey();
+                                                String name = childDataSnapshot.child("name").getValue().toString();
+                                                stu.child(user.getUid()).child("predmeti").child(key).setValue(name);
+                                            }
+                                        }
+                                        @Override
+                                        public void onCancelled(DatabaseError databaseError) {
+
+                                        }
+                                    });
+
                                 }
                             });
                         } else {
