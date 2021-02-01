@@ -31,11 +31,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d18851a-b015-421b-af95-686792ebff71" name="Default Changelist" comment="dodavanje učenika i predmeta u razrede">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/AddClassFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/AddClassFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/users/AddUsersFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/users/AddUsersFragment.java" afterDir="false" />
-    </list>
+    <list default="true" id="1d18851a-b015-421b-af95-686792ebff71" name="Default Changelist" comment="dodavanje predmeta u učenike" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -387,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612174647953</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="dodavanje predmeta u učenike">
+      <created>1612176909141</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612176909141</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -411,7 +414,8 @@
     <MESSAGE value="popravljeni bugovi" />
     <MESSAGE value="dodano nastavničko sučelje, promjene u izgledu" />
     <MESSAGE value="dodavanje učenika i predmeta u razrede" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodavanje učenika i predmeta u razrede" />
+    <MESSAGE value="dodavanje predmeta u učenike" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodavanje predmeta u učenike" />
   </component>
   <component name="WindowStateProjectService">
     <state x="547" y="35" key="#Ednevnik-1.Ednevnik.app" timestamp="1611999815520">
