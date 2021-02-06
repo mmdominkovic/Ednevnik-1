@@ -15,16 +15,17 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import ba.sum.fpmoz.mim.R;
-import ba.sum.fpmoz.mim.model.Class;
-public class ClassAdapterForProfesors extends FirebaseRecyclerAdapter<Class, ClassAdapterForProfesors.ClassViewHolder> {
+import ba.sum.fpmoz.mim.model.Subject;
+public class ClassAdapterForProfesors extends FirebaseRecyclerAdapter<Subject, ClassAdapterForProfesors.ClassViewHolder> {
 
-    public ClassAdapterForProfesors(@NonNull FirebaseRecyclerOptions<Class>options){
+    public ClassAdapterForProfesors(@NonNull FirebaseRecyclerOptions<Subject>options){
         super(options);
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull ClassAdapterForProfesors.ClassViewHolder holder, int position, @NonNull Class model) {
+    protected void onBindViewHolder(@NonNull ClassAdapterForProfesors.ClassViewHolder holder, int position, @NonNull Subject model) {
         holder.className.setText(model.getName());
+        holder.classSubject.setText(model.getRazred());
     }
 
 
@@ -51,9 +52,6 @@ public class ClassAdapterForProfesors extends FirebaseRecyclerAdapter<Class, Cla
     public class ClassViewHolder extends RecyclerView.ViewHolder{
         TextView className;
         TextView classSubject;
-        Button classDeleteBtn;
-        Button classEditBtn;
-
 
         Adapter.ClickListener clickListener;
 
@@ -65,8 +63,6 @@ public class ClassAdapterForProfesors extends FirebaseRecyclerAdapter<Class, Cla
             super(itemView);
             className=itemView.findViewById(R.id.classNameTxt);
             classSubject=itemView.findViewById(R.id.classPredmetTxt);
-            classEditBtn=itemView.findViewById(R.id.classEditBtn);
-            classDeleteBtn=itemView.findViewById(R.id.classDeleteBtn);
 
             itemView.setOnClickListener((v)->{
                 clickListener.OnClickListener(v, getAdapterPosition());

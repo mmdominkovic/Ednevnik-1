@@ -15,7 +15,7 @@
             android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Razred" />
+            android:text="Naziv predmeta" />
 
         <TextView
             android:id="@+id/classNameTxt"
@@ -30,7 +30,7 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Predmeti" />
+            android:text="Razred" />
 
         <TextView
             android:id="@+id/classPredmetTxt"
@@ -40,14 +40,6 @@
             android:paddingBottom="10dp"
             android:text="TextView"
             android:textSize="25sp" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="Prikaži učenike" />
 
         <LinearLayout
             android:layout_width="match_parent"

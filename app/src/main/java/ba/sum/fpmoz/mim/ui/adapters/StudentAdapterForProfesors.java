@@ -56,8 +56,6 @@ public class StudentAdapterForProfesors extends FirebaseRecyclerAdapter<Student,
         TextView studentName;
         TextView studentSurname;
         TextView studentUid;
-        Button studentEditBtn;
-        Button studentDeleteBtn;
 
         Adapter.ClickListener clickListener;
 
@@ -70,17 +68,7 @@ public class StudentAdapterForProfesors extends FirebaseRecyclerAdapter<Student,
             studentName = itemView.findViewById(R.id.studentNameTxt);
             studentSurname = itemView.findViewById(R.id.studentSurnameTxt);
             studentUid = itemView.findViewById(R.id.studentUidTxt);
-            studentEditBtn = itemView.findViewById(R.id.studentEditBtn);
-            studentDeleteBtn = itemView.findViewById(R.id.studentDeleteBtn);
 
-            studentDeleteBtn.setOnClickListener(v -> getRef(getAdapterPosition()).removeValue());
-
-            studentEditBtn.setOnClickListener((v) -> {
-                String key = getRef(getAdapterPosition()).getKey();
-                Intent i= new Intent(itemView.getContext(), UserAdminEditActivity.class);
-                i.putExtra("USER_ID", key);
-                itemView.getContext().startActivity(i);
-            } );
             itemView.setOnClickListener((v) -> clickListener.OnClickListener(v, getAdapterPosition()));
             itemView.setOnLongClickListener((v) -> {
                 clickListener.OnClickListener(v, getAdapterPosition());

@@ -3,7 +3,7 @@ package ba.sum.fpmoz.mim.model;
 public class Subject {
     public String uid;
     public String name;
-    public String idnastavnika;
+    public String razred;
 
     public Subject() {
     }
@@ -12,10 +12,10 @@ public class Subject {
         this.name = name;
     }
 
-    public Subject(String uid, String name, String idnastavnika) {
+    public Subject(String uid, String name, String razred) {
         this.uid = uid;
         this.name = name;
-        this.idnastavnika = idnastavnika;
+        this.razred = razred;
     }
 
     public String getUid() {
@@ -34,11 +34,11 @@ public class Subject {
         this.name = name;
     }
 
-    public String getIdnastavnika() {
-        return idnastavnika;
+    public String getRazred() {
+        return razred;
     }
 
-    public void setIdnastavnika(String idnastavnika) {
-        this.idnastavnika = idnastavnika;
+    public void setRazred(String razred) {
+        this.razred = razred;
     }
 }

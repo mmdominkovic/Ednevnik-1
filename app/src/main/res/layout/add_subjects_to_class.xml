@@ -38,9 +38,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Naziv predmeta"
+            android:hint="Nastavnik"
             android:inputType="textPersonName" />
 
+        <TextView
+            android:id="@+id/spinnerTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:text="Odaberite nastavnika"
+            />
+
+        <Spinner
+            android:id="@+id/spinnerNasPred"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10" />
 
         <Button
             android:id="@+id/AddSubjectBtn"

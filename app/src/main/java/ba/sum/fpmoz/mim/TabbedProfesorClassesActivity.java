@@ -13,6 +13,7 @@ import ba.sum.fpmoz.mim.ui.adapters.TabbedAdapter;
 import ba.sum.fpmoz.mim.ui.fragments.classes.AddClassFragment;
 import ba.sum.fpmoz.mim.ui.fragments.classes.ListClassFragment;
 import ba.sum.fpmoz.mim.ui.fragments.classes.ListClassesForProfesors;
+import ba.sum.fpmoz.mim.ui.fragments.users.ListStudentsForProfesors;
 
 public class TabbedProfesorClassesActivity extends AppCompatActivity {
     TabLayout layout;
@@ -29,10 +30,10 @@ public class TabbedProfesorClassesActivity extends AppCompatActivity {
         this.adapter= new TabbedAdapter(getSupportFragmentManager(), 1);
 
         this.adapter.addFragment(
-                new ListClassesForProfesors(), "Svi razredi"
+                new ListClassesForProfesors(), "Moji predmeti"
         );
         this.adapter.addFragment(
-                new ListClassesForProfesors(), "Moji razredi"
+                new ListStudentsForProfesors(), "Moji učenici"
         );
 
         this.pager.setAdapter(this.adapter);

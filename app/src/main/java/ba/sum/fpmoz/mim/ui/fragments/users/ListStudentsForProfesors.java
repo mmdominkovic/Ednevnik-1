@@ -18,12 +18,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import ba.sum.fpmoz.mim.R;
 import ba.sum.fpmoz.mim.model.Student;
 import ba.sum.fpmoz.mim.ui.adapters.StudentAdapter;
+import ba.sum.fpmoz.mim.ui.adapters.StudentAdapterForProfesors;
 
 
 public class ListStudentsForProfesors extends Fragment {
     FirebaseDatabase db;
     DatabaseReference ref;
-    StudentAdapter adapter;
+    StudentAdapterForProfesors adapter;
     RecyclerView studentListView;
 
     @Nullable
@@ -39,7 +40,7 @@ public class ListStudentsForProfesors extends Fragment {
         FirebaseRecyclerOptions<Student> options = new FirebaseRecyclerOptions
                 .Builder<Student>()
                 .setQuery(this.ref, Student.class).build();
-        this.adapter = new StudentAdapter(options);
+        this.adapter = new StudentAdapterForProfesors(options);
         this.studentListView.setAdapter(this.adapter);
         return userListView;
     }
