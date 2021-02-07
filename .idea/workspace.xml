@@ -34,33 +34,71 @@
     <list default="true" id="1d18851a-b015-421b-af95-686792ebff71" name="Default Changelist" comment="proff">
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/google-services.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/ba/sum/fpmoz/mim/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/ba/sum/fpmoz/imm/ExampleInstrumentedTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/AddSubjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/AddSubjects.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ClassAdminEditActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ClassAdminEditActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/HomeNavigationProfesorActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/HomeNavigationProfesorActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/TabbedProfesorClassesActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/TabbedProfesorClassesActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/TabbedProfesorUsersActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/TabbedProfesorUsersActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/model/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/model/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/ClassAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/ClassAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/ClassAdapterForProfesors.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/ClassAdapterForProfesors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/StudentAdapterForProfesors.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/SubjectAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/SubjectAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/SubjectListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/SubjectListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/AddClassFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/AddClassFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/subjects/AddSubjectFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/subjects/AddSubjectFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/users/AddUsersFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/users/AddUsersFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/users/ListStudentsForProfesors.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_class_admin_edit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_class_admin_edit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home_profesor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home_profesor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_tabbed_profesor_students.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_list_for_profesors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/add_subjects_to_class.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/add_subjects_to_class.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_class_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_class_admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_class_profesor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_class_profesor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_student_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_student_admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_student_profesor.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_subject_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_subject_admin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_subject_to_class_admin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_subject_to_class_admin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/AddSubjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/AddSubjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ClassAdminActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ClassAdminActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ClassAdminEditActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ClassAdminEditActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/HomeNavigationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/HomeNavigationActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/HomeNavigationProfesorActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/HomeNavigationProfesorActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/HomeNavigationStudentActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/HomeNavigationStudentActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/SubjectAdminActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/SubjectAdminActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/SubjectAdminEditActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/SubjectAdminEditActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/TabbedClassesActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/TabbedClassesActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/TabbedClassesInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/TabbedClassesInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/TabbedOcjeneProfesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/TabbedOcjeneProfesor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/TabbedProfesorClassesActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/TabbedProfesorClassesActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/TabbedProfesorUsersActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/TabbedProfesorUsersActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/TabbedStudentsProfesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/TabbedStudentsProfesor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/TabbedSubjectsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/TabbedSubjectsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/TabbedSubjectsInStudents.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/TabbedSubjectsInStudents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/TabbedUserAdminActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/TabbedUserAdminActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/TeacherAdminEditActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/TeacherAdminEditActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/UserAdminEditActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/UserAdminEditActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/UserMainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/UserMainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/model/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/model/Class.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/model/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/model/Grade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/model/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/model/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/model/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/model/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/Adapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/adapters/Adapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/ClassAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/adapters/ClassAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/ClassAdapterForProfesors.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/adapters/ClassAdapterForProfesors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/OcjeneProfesorAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/adapters/OcjeneProfesorAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/RazrediProfesors.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/adapters/RazrediProfesors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/StudentAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/adapters/StudentAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/StudentsInClassAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/adapters/StudentsInClassAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/StudentsProfesorAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/adapters/StudentsProfesorAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/SubjectAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/adapters/SubjectAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/SubjectListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/adapters/SubjectListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/SubjectsInClassAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/adapters/SubjectsInClassAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/SubjectsProfesorAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/adapters/SubjectsProfesorAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/TabbedAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/adapters/TabbedAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/adapters/TeacherAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/adapters/TeacherAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/AddClassFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/fragments/classes/AddClassFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/ListClassFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/fragments/classes/ListClassFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/ListClassesForProfesors.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/fragments/classes/ListClassesForProfesors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/ListOcjeneProfesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/fragments/classes/ListOcjeneProfesor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/ListRazredForProfesors.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/fragments/classes/ListRazredForProfesors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/ListStudentsInClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/fragments/classes/ListStudentsInClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/ListStudentsProfesor.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/fragments/classes/ListStudentsProfesor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/ListSubjectsInClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/fragments/classes/ListSubjectsInClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/classes/ListSubjectsInStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/fragments/classes/ListSubjectsInStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/subjects/AddSubjectFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/fragments/subjects/AddSubjectFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/subjects/ListSubjectFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/fragments/subjects/ListSubjectFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/users/AddUsersFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/fragments/users/AddUsersFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/users/ListTeachersFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/fragments/users/ListTeachersFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/mim/ui/fragments/users/ListUsersFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ui/fragments/users/ListUsersFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_tabbed_ocjene_profesor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_tabbed_ocjene_profesor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_ocjena_profesor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_ocjena_profesor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_students_profesor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_students_profesor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_subjects_in_students.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/viewholder_subjects_in_students.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/ba/sum/fpmoz/mim/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/ba/sum/fpmoz/imm/ExampleUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +189,9 @@
       <recent name="C:\Users\HP\AndroidStudioProjects\Ednevnik-1\app\src\main\java\ba\sum\fpmoz\mim" />
       <recent name="C:\Users\HP\AndroidStudioProjects\Ednevnik-1\app\src\main\java\ba\sum\fpmoz\mim\ui\fragments\users" />
     </key>
+    <key name="android.template.-216889496">
+      <recent name="ba.sum.fpmoz.imm" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ba.sum.fpmoz.mim.ui.fragments.classes" />
       <recent name="ba.sum.fpmoz.mim.ui.adapters" />
@@ -158,6 +199,7 @@
       <recent name="ba.sum.fpmoz.mim.model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\AndroidStudioProjects\Ednevnik-1\app" />
       <recent name="C:\Users\megid\Downloads\ednevnik-main\app\src\main\res" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -444,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612618221214</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="proff">
+      <created>1612710318779</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1612710318779</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -539,30 +588,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="561" y="260" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1611491988852" />
-    <state width="1480" height="2" key="GridCell.Tab.0.bottom" timestamp="1612708950224">
+    <state width="1480" height="39" key="GridCell.Tab.0.bottom" timestamp="1612739552777">
       <screen x="75" y="0" width="1525" height="900" />
     </state>
     <state width="1281" height="151" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611792060341" />
     <state width="1491" height="268" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611332723808" />
-    <state width="1480" height="2" key="GridCell.Tab.0.bottom/75.0.1525.900@75.0.1525.900" timestamp="1612708950224" />
-    <state width="1480" height="2" key="GridCell.Tab.0.center" timestamp="1612708950224">
+    <state width="1480" height="39" key="GridCell.Tab.0.bottom/75.0.1525.900@75.0.1525.900" timestamp="1612739552777" />
+    <state width="1480" height="39" key="GridCell.Tab.0.center" timestamp="1612739552777">
       <screen x="75" y="0" width="1525" height="900" />
     </state>
     <state width="1281" height="151" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1611792060341" />
     <state width="1491" height="268" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611332723808" />
-    <state width="1480" height="2" key="GridCell.Tab.0.center/75.0.1525.900@75.0.1525.900" timestamp="1612708950224" />
-    <state width="1480" height="2" key="GridCell.Tab.0.left" timestamp="1612708950224">
+    <state width="1480" height="39" key="GridCell.Tab.0.center/75.0.1525.900@75.0.1525.900" timestamp="1612739552777" />
+    <state width="1480" height="39" key="GridCell.Tab.0.left" timestamp="1612739552777">
       <screen x="75" y="0" width="1525" height="900" />
     </state>
     <state width="1281" height="151" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1611792060341" />
     <state width="1491" height="268" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611332723807" />
-    <state width="1480" height="2" key="GridCell.Tab.0.left/75.0.1525.900@75.0.1525.900" timestamp="1612708950224" />
-    <state width="1480" height="2" key="GridCell.Tab.0.right" timestamp="1612708950224">
+    <state width="1480" height="39" key="GridCell.Tab.0.left/75.0.1525.900@75.0.1525.900" timestamp="1612739552777" />
+    <state width="1480" height="39" key="GridCell.Tab.0.right" timestamp="1612739552777">
       <screen x="75" y="0" width="1525" height="900" />
     </state>
     <state width="1281" height="151" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1611792060341" />
     <state width="1491" height="268" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611332723808" />
-    <state width="1480" height="2" key="GridCell.Tab.0.right/75.0.1525.900@75.0.1525.900" timestamp="1612708950224" />
+    <state width="1480" height="39" key="GridCell.Tab.0.right/75.0.1525.900@75.0.1525.900" timestamp="1612739552777" />
     <state width="1281" height="151" key="GridCell.Tab.1.bottom" timestamp="1611792023442">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -596,12 +645,12 @@
     </state>
     <state x="246" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1611491934626" />
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610981869017" />
-    <state x="433" y="158" key="Vcs.Push.Dialog.v2" timestamp="1612618233944">
+    <state x="433" y="158" key="Vcs.Push.Dialog.v2" timestamp="1612710330401">
       <screen x="75" y="0" width="1525" height="900" />
     </state>
     <state x="321" y="128" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1611787452835" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1611343444444" />
-    <state x="433" y="158" key="Vcs.Push.Dialog.v2/75.0.1525.900@75.0.1525.900" timestamp="1612618233944" />
+    <state x="433" y="158" key="Vcs.Push.Dialog.v2/75.0.1525.900@75.0.1525.900" timestamp="1612710330401" />
     <state x="1004" y="194" key="chooseDestDirectoryDialog" timestamp="1611241182025">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -614,10 +663,11 @@
       <screen x="75" y="0" width="1525" height="900" />
     </state>
     <state x="167" y="92" width="1341" height="716" key="com.intellij.history.integration.ui.views.FileHistoryDialog/75.0.1525.900@75.0.1525.900" timestamp="1612169343491" />
-    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611319477585">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="649" y="356" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612729974330">
+      <screen x="75" y="0" width="1525" height="900" />
     </state>
     <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1611319477585" />
+    <state x="649" y="356" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/75.0.1525.900@75.0.1525.900" timestamp="1612729974330" />
     <state x="644" y="144" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1611308849611">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
