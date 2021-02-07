@@ -7,13 +7,10 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
-import ba.sum.fpmoz.mim.R;
+import ba.sum.fpmoz.mim.ui.adapters.RazrediProfesors;
 import ba.sum.fpmoz.mim.ui.adapters.TabbedAdapter;
 import ba.sum.fpmoz.mim.ui.fragments.classes.ListClassesForProfesors;
-import ba.sum.fpmoz.mim.ui.fragments.users.AddUsersFragment;
-import ba.sum.fpmoz.mim.ui.fragments.users.ListStudentsForProfesors;
-import ba.sum.fpmoz.mim.ui.fragments.users.ListTeachersFragment;
-import ba.sum.fpmoz.mim.ui.fragments.users.ListUsersFragment;
+import ba.sum.fpmoz.mim.ui.fragments.classes.ListRazredForProfesors;
 
 public class TabbedProfesorUsersActivity extends AppCompatActivity {
 
@@ -31,9 +28,8 @@ public class TabbedProfesorUsersActivity extends AppCompatActivity {
         this.adapter = new TabbedAdapter(getSupportFragmentManager(), 1);
 
         this.adapter.addFragment(
-                new ListStudentsForProfesors(), "Moji učenici"
+                new ListRazredForProfesors(), "Moji razredi"
         );
-
         this.adapter.addFragment(
                 new ListClassesForProfesors(), "Moji predmeti"
         );

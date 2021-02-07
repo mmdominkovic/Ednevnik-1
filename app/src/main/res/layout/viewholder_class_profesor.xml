@@ -12,35 +12,24 @@
         android:padding="10sp">
 
         <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Naziv predmeta" />
-
-        <TextView
-            android:id="@+id/classNameTxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="TextView"
-            android:textSize="25sp" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Razred" />
-
-        <TextView
             android:id="@+id/classPredmetTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="TextView"
-            android:textSize="25sp" />
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/ocjenaTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="TextView"
+            android:textSize="30sp"
+            />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

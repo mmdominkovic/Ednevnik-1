@@ -19,7 +19,7 @@ public class HomeNavigationProfesorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_profesor);
-        setTitle("Dobrodošli profesore" );
+        setTitle("Dobrodošli profesore");
 
         this.usersCardId = findViewById(R.id.usersCardId);
         this.usersCardId.setOnClickListener(new View.OnClickListener() {

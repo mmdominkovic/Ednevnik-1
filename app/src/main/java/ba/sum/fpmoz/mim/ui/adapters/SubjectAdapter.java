@@ -60,7 +60,7 @@ public class SubjectAdapter extends FirebaseRecyclerAdapter<Subject, SubjectAdap
             super(itemView);
             subjectName=itemView.findViewById(R.id.subjectNameTxt);
             subjectEditBtn=itemView.findViewById(R.id.subjectAddBtn);
-            subjectDeleteBtn=itemView.findViewById(R.id.subjectDeleteBtn);
+            subjectDeleteBtn=itemView.findViewById(R.id.ocjeneBtn);
 
             subjectDeleteBtn.setOnClickListener(v -> getRef(getAdapterPosition()).removeValue());
 

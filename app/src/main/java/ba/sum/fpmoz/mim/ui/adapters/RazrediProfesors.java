@@ -10,25 +10,26 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import ba.sum.fpmoz.mim.R;
-import ba.sum.fpmoz.mim.TabbedClassesInfo;
-import ba.sum.fpmoz.mim.model.Subject;
-public class ClassAdapterForProfesors extends FirebaseRecyclerAdapter<Subject, ClassAdapterForProfesors.ClassViewHolder> {
+import ba.sum.fpmoz.mim.TabbedStudentsProfesor;
+import ba.sum.fpmoz.mim.model.Class;
+public class RazrediProfesors extends FirebaseRecyclerAdapter<Class, RazrediProfesors.ClassViewHolder> {
 
-    public ClassAdapterForProfesors(@NonNull FirebaseRecyclerOptions<Subject>options){
+    public RazrediProfesors(@NonNull FirebaseRecyclerOptions<Class> options){
         super(options);
     }
     @Override
-    protected void onBindViewHolder(@NonNull ClassAdapterForProfesors.ClassViewHolder holder, int position, @NonNull Subject model) {
-        holder.classSubject.setText(model.getName());
+    protected void onBindViewHolder(@NonNull RazrediProfesors.ClassViewHolder holder, int position, @NonNull Class model) {
+        holder.razred.setText(model.getName());
     }
     @NonNull
     @Override
-    public ClassAdapterForProfesors.ClassViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_class_profesor,parent,false);
+    public RazrediProfesors.ClassViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.viewholder_razred_profesor,parent,false);
         ClassViewHolder viewHolder = new ClassViewHolder(view);
 
         viewHolder.setOnClickListener(new Adapter.ClickListener(){
@@ -46,7 +47,8 @@ public class ClassAdapterForProfesors extends FirebaseRecyclerAdapter<Subject, C
         return viewHolder;
     }
     public class ClassViewHolder extends RecyclerView.ViewHolder{
-        TextView classSubject;
+        TextView razred;
+        Button ucenici;
 
         Adapter.ClickListener clickListener;
 
@@ -56,15 +58,24 @@ public class ClassAdapterForProfesors extends FirebaseRecyclerAdapter<Subject, C
 
         public ClassViewHolder(@NonNull View itemView){
             super(itemView);
-            classSubject=itemView.findViewById(R.id.classPredmetTxt);
+            razred=itemView.findViewById(R.id.ocjenaTxt);
+            ucenici=itemView.findViewById(R.id.uceniciBtn);
+
             itemView.setOnClickListener((v)->{
                 clickListener.OnClickListener(v, getAdapterPosition());
             });
+
             itemView.setOnLongClickListener((v)->{
                 clickListener.OnLongClickListener(v, getAdapterPosition());
                 return true;
             });
 
+            ucenici.setOnClickListener((v) -> {
+                String key = getRef(getAdapterPosition()).getKey();
+                Intent i= new Intent(itemView.getContext(), TabbedStudentsProfesor.class);
+                i.putExtra("CLASS_ID", key);
+                itemView.getContext().startActivity(i);
+            } );
         }
 
 

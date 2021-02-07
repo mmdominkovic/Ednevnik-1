@@ -52,7 +52,7 @@ public class AddClassFragment extends Fragment {
                 String name = className;
                 Intent i = new Intent(getContext(), AddSubjects.class);
                 i.putExtra("CLASS_ID", key);
-                i.putExtra("CLASS_NAME", className);
+                i.putExtra("CLASS_NAME", name);
 
                 Toast.makeText(classAdminView.getContext(),
                         "Uspješno ste dodali razred",Toast.LENGTH_LONG).show();

@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="408dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,29 +21,35 @@
 
         <EditText
             android:id="@+id/classNameEdt"
-            android:layout_width="280dp"
+            android:layout_width="396dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
             android:text="TextView" />
 
-        <Button
-            android:id="@+id/classEditBtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:backgroundTint="@color/green"
-            android:text="Uredi" />
-
     </LinearLayout>
+
+    <Button
+        android:id="@+id/classEditBtn"
+        android:layout_width="375dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/green"
+        android:text="Uredi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="414dp"
+        android:layout_width="match_parent"
         android:layout_height="248dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,25 +59,54 @@
         app:layout_constraintVertical_bias="0.316">
 
         <TextView
-            android:id="@+id/predmetiTxt"
+            android:id="@+id/textView6"
+            style="@android:style/Widget.DeviceDefault.Light.TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Predmeti" />
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:text="Dodajte predmete"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/subjectNameInp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Naziv predmeta"
+            android:hint="Predmet"
             android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/spinnerTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:text="Odaberite nastavnika" />
+
+        <Spinner
+            android:id="@+id/spinnerNasPred"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10" />
 
         <Button
             android:id="@+id/AddSubjectBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dodaj predmet"
-            android:backgroundTint="@color/green" />
+            android:backgroundTint="@color/green"
+            android:text="Dodaj predmet" />
+
     </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

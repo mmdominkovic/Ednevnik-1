@@ -15,41 +15,16 @@
             android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ime i prezime" />
+            android:text="Predmet" />
 
         <TextView
-            android:id="@+id/studentNameTxt"
+            android:id="@+id/subjectNameTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="TextView"
             android:textSize="25sp" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email" />
-
-        <TextView
-            android:id="@+id/studentSurnameTxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="TextView"
-            android:textSize="25sp" />
-
-        <TextView
-            android:id="@+id/studentUidTxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10sp"
-            android:paddingBottom="10sp"
-            android:text="TextView"
-            android:textSize="25sp"
-            android:visibility="gone" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,7 +33,7 @@
 
 
             <Button
-                android:id="@+id/studentEditBtn"
+                android:id="@+id/ocjeneBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -69,22 +44,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:text="Uredi"
-                app:backgroundTint="@color/green" />
-
-            <Button
-                android:id="@+id/studentDeleteBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="1"
-                android:text="Obriši"
+                android:text="Ukloni iz razreda"
                 app:backgroundTint="@color/green" />
 
         </LinearLayout>

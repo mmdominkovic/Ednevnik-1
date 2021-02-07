@@ -41,9 +41,10 @@ public class AddSubjectFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String id_nastavnika = " ";
+                String id = "";
                 String newSubjectKey = ref.push().getKey();
                 String subjectName = subjectNameInp.getText().toString();
-                ref.child(newSubjectKey).setValue(new Subject(newSubjectKey, subjectName, id_nastavnika ));
+                ref.child(newSubjectKey).setValue(new Subject(newSubjectKey, subjectName, id_nastavnika, id ));
                 subjectNameInp.setText("");
                 Toast.makeText(subjectAdminView.getContext(),
                         "Uspješno ste dodali predmet",Toast.LENGTH_LONG).show();

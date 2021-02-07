@@ -11,42 +11,27 @@
         android:orientation="vertical"
         android:padding="10sp">
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Predmet" />
-
-        <TextView
-            android:id="@+id/subjectNameTxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="TextView"
-            android:textSize="25sp" />
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/subjectAddBtn"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/ocjenaTxt"
+                android:layout_width="187dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Uredi razred"
-                app:backgroundTint="@color/green" />
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="TextView"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <Button
-                android:id="@+id/ocjeneBtn"
+                android:id="@+id/uceniciBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Obrisi"
-                app:backgroundTint="@color/green"/>
+                android:text="Prikaži učenike" />
         </LinearLayout>
 
     </LinearLayout>

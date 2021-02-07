@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import ba.sum.fpmoz.mim.model.Class;
 import ba.sum.fpmoz.mim.model.Subject;
 
 
@@ -35,12 +36,10 @@ public class AddSubjects extends AppCompatActivity {
     DatabaseReference ref, nas;
     EditText subjectNameInp;
     Button addSubjectBtn;
-
     Spinner spinnerNasPred;
     TextView spinnerTxt;
-    String item;
     List<String> predmetno;
-    String selectedItem, selectedItem2;
+    String selectedItem;
     HashMap<String,String> predmetiUid=new HashMap<String,String>();
 
     @Override
@@ -49,7 +48,7 @@ public class AddSubjects extends AppCompatActivity {
         setContentView(R.layout.add_subjects_to_class);
 
         final String key=getIntent().getStringExtra("CLASS_ID");
-        final String razname=getIntent().getStringExtra("CLASS_NAME");
+        final String razname = getIntent().getStringExtra("CLASS_NAME");
         this.db=FirebaseDatabase.getInstance();
         this.ref=this.db.getReference("razredi/").child(key).child("predmeti");
         this.nas=this.db.getReference("nastavnici");
@@ -59,11 +58,10 @@ public class AddSubjects extends AppCompatActivity {
         this.subjectNameInp = findViewById(R.id.subjectNameInp);
         this.addSubjectBtn = findViewById(R.id.AddSubjectBtn);
 
-
         nas.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                final List<String >predmeti=new ArrayList<String>();
+                final List<String>predmeti=new ArrayList<String>();
                 for(DataSnapshot ds:snapshot.getChildren()){
                     String prvi=ds.child("name").getValue().toString();
                     String drugi=ds.child("uid").getValue().toString();
@@ -97,7 +95,6 @@ public class AddSubjects extends AppCompatActivity {
         addSubjectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String id_nastavnika = " ";
                 String newSubjectKey = ref.push().getKey();
                 String subjectName = subjectNameInp.getText().toString();
                 String uidpred=predmetiUid.get(selectedItem);
@@ -105,8 +102,9 @@ public class AddSubjects extends AppCompatActivity {
                 subjectNameInp.setText("");
                 Toast.makeText(AddSubjects.this,
                         "Uspješno ste dodali predmet",Toast.LENGTH_LONG).show();
-                nas.child(uidpred).child("predmeti").child(newSubjectKey).setValue(new Subject(newSubjectKey, subjectName, razname));
-
+                nas.child(uidpred).child("predmeti").child(newSubjectKey).setValue(new Subject(newSubjectKey, subjectName, uidpred, razname));
+                nas.child(uidpred).child("moji_razredi").child(key).setValue(new Class(key, razname));
+                ref.child(newSubjectKey).setValue(new Subject(newSubjectKey, subjectName, uidpred, razname));
             }
         });
 

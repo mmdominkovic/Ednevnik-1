@@ -1,4 +1,4 @@
-package ba.sum.fpmoz.mim.ui.fragments.users;
+package ba.sum.fpmoz.mim.ui.fragments.classes;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,32 +17,33 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import ba.sum.fpmoz.mim.R;
 import ba.sum.fpmoz.mim.model.Student;
-import ba.sum.fpmoz.mim.ui.adapters.StudentAdapter;
-import ba.sum.fpmoz.mim.ui.adapters.StudentAdapterForProfesors;
+import ba.sum.fpmoz.mim.ui.adapters.StudentsProfesorAdapter;
 
 
-public class ListStudentsForProfesors extends Fragment {
+public class ListStudentsProfesor extends Fragment {
     FirebaseDatabase db;
     DatabaseReference ref;
-    StudentAdapterForProfesors adapter;
+    StudentsProfesorAdapter adapter;
     RecyclerView studentListView;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View userListView = inflater.inflate(R.layout.activity_user_list_for_profesors, container, false);
-        this.studentListView = userListView.findViewById(R.id.studentListView);
+        View studentListView = inflater.inflate(R.layout.activity_students_profesor, container, false);
+        this.studentListView = studentListView.findViewById(R.id.studentListView);
 
         this.db = FirebaseDatabase.getInstance();
-        this.ref = this.db.getReference("učenici");
+        String key = getActivity().getIntent().getStringExtra("CLASS_ID");
+        this.ref=this.db.getReference("razredi/").child(key).child("učenici");
         this.studentListView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         FirebaseRecyclerOptions<Student> options = new FirebaseRecyclerOptions
                 .Builder<Student>()
                 .setQuery(this.ref, Student.class).build();
-        this.adapter = new StudentAdapterForProfesors(options);
+        this.adapter = new StudentsProfesorAdapter(options);
         this.studentListView.setAdapter(this.adapter);
-        return userListView;
+
+        return studentListView;
     }
 
     @Override

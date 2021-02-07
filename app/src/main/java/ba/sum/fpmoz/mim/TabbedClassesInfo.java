@@ -1,6 +1,7 @@
 package ba.sum.fpmoz.mim;
 
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -8,11 +9,10 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 
 import ba.sum.fpmoz.mim.ui.adapters.TabbedAdapter;
-import ba.sum.fpmoz.mim.ui.fragments.classes.ListClassesForProfesors;
-import ba.sum.fpmoz.mim.ui.fragments.classes.ListRazredForProfesors;
+import ba.sum.fpmoz.mim.ui.fragments.classes.ListStudentsInClass;
+import ba.sum.fpmoz.mim.ui.fragments.classes.ListSubjectsInClass;
 
-
-public class TabbedProfesorClassesActivity extends AppCompatActivity {
+public class TabbedClassesInfo extends AppCompatActivity {
     TabLayout layout;
     ViewPager pager;
     TabbedAdapter adapter;
@@ -20,18 +20,19 @@ public class TabbedProfesorClassesActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tabbed_profesor_classes);
-        setTitle("Predmeti");
-        this.layout=findViewById(R.id.classesTabLayout);
-        this.pager=findViewById(R.id.classesViewPager);
+        setContentView(R.layout.activity_tabbed_classes_info);
+        setTitle("Detalji");
+        this.layout=findViewById(R.id.classesInfoTabLayout);
+        this.pager=findViewById(R.id.classesInfoViewPager);
         this.adapter= new TabbedAdapter(getSupportFragmentManager(), 1);
 
         this.adapter.addFragment(
-                new ListClassesForProfesors(), "Moji predmeti"
+                new ListSubjectsInClass(), "Predmeti"
         );
         this.adapter.addFragment(
-                new ListRazredForProfesors(), "Moji razredi"
+                new ListStudentsInClass(), "Učenici"
         );
+
         this.pager.setAdapter(this.adapter);
         this.layout.setupWithViewPager(this.pager);
     }

@@ -15,7 +15,9 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import ba.sum.fpmoz.mim.ClassAdminEditActivity;
 import ba.sum.fpmoz.mim.R;
+import ba.sum.fpmoz.mim.TabbedClassesInfo;
 import ba.sum.fpmoz.mim.model.Class;
+
 public class ClassAdapter extends FirebaseRecyclerAdapter<Class, ClassAdapter.ClassViewHolder> {
 
     public ClassAdapter(@NonNull FirebaseRecyclerOptions<Class>options){
@@ -27,7 +29,6 @@ public class ClassAdapter extends FirebaseRecyclerAdapter<Class, ClassAdapter.Cl
         holder.className.setText(model.getName());
 
     }
-
 
     @NonNull
     @Override
@@ -52,8 +53,7 @@ public class ClassAdapter extends FirebaseRecyclerAdapter<Class, ClassAdapter.Cl
     public class ClassViewHolder extends RecyclerView.ViewHolder{
         TextView className;
 
-        Button classDeleteBtn;
-        Button classEditBtn;
+        Button classDeleteBtn, classEditBtn, ucenici, predmeti;
 
 
         Adapter.ClickListener clickListener;
@@ -66,10 +66,10 @@ public class ClassAdapter extends FirebaseRecyclerAdapter<Class, ClassAdapter.Cl
             super(itemView);
             className=itemView.findViewById(R.id.classNameTxt);
 
-
-
             classEditBtn=itemView.findViewById(R.id.classEditBtn);
             classDeleteBtn=itemView.findViewById(R.id.classDeleteBtn);
+            predmeti=itemView.findViewById(R.id.predmeti);
+            ucenici=itemView.findViewById(R.id.ucenici);
 
             classDeleteBtn.setOnClickListener(v -> getRef(getAdapterPosition()).removeValue());
 
@@ -78,6 +78,22 @@ public class ClassAdapter extends FirebaseRecyclerAdapter<Class, ClassAdapter.Cl
                 Intent i= new Intent(itemView.getContext(), ClassAdminEditActivity.class);
                 i.putExtra("CLASS_ID", key);
                 itemView.getContext().startActivity(i);
+            } );
+
+            ucenici.setOnClickListener((v) -> {
+                String key = getRef(getAdapterPosition()).getKey();
+                Intent i= new Intent(itemView.getContext(), TabbedClassesInfo.class);
+                i.putExtra("CLASS_ID", key);
+                itemView.getContext().startActivity(i);
+            } );
+
+            predmeti.setOnClickListener((v) -> {
+
+                String key = getRef(getAdapterPosition()).getKey();
+                Intent i = new Intent(itemView.getContext(), TabbedClassesInfo.class);
+                i.putExtra("CLASS_ID", key);
+                itemView.getContext().startActivity(i);
+
             } );
 
             itemView.setOnClickListener((v)->{

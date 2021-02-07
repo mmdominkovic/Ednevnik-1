@@ -26,40 +26,29 @@
             android:text="TextView"
             android:textSize="25sp" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Prezime učenika" />
-
-        <TextView
-            android:id="@+id/studentSurnameTxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="TextView"
-            android:textSize="25sp" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Jedinstveni identifikator učenika" />
-
-        <TextView
-            android:id="@+id/studentUidTxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10sp"
-            android:paddingBottom="10sp"
-            android:text="TextView"
-            android:textSize="25sp" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"/>
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/studentGradeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:text="Ocjene"
+                android:visibility="visible"
+                app:backgroundTint="@color/green" />
+
+        </LinearLayout>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

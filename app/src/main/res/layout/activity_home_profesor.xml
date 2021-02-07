@@ -43,7 +43,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Učenici"
+                    android:text="Razredi"
                     android:textStyle="bold" />
 
                 <View
@@ -89,7 +89,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Razredi"
+                    android:text="Predmeti"
                     android:textStyle="bold" />
 
                 <View

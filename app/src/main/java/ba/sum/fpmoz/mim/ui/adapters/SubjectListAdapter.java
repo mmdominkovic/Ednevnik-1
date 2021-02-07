@@ -1,6 +1,5 @@
 package ba.sum.fpmoz.mim.ui.adapters;
 
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import ba.sum.fpmoz.mim.R;
-import ba.sum.fpmoz.mim.SubjectAdminEditActivity;
 import ba.sum.fpmoz.mim.model.Subject;
 
 public class SubjectListAdapter extends FirebaseRecyclerAdapter<Subject, SubjectListAdapter.SubjectListViewHolder> {
@@ -60,7 +58,7 @@ public class SubjectListAdapter extends FirebaseRecyclerAdapter<Subject, Subject
             super(itemView);
             subjectName=itemView.findViewById(R.id.subjectNameTxt);
             subjectAddBtn=itemView.findViewById(R.id.subjectAddBtn);
-            subjectDeleteBtn=itemView.findViewById(R.id.subjectDeleteBtn);
+            subjectDeleteBtn=itemView.findViewById(R.id.ocjeneBtn);
 
             subjectDeleteBtn.setOnClickListener(v -> getRef(getAdapterPosition()).removeValue());
 

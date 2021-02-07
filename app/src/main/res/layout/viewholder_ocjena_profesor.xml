@@ -11,15 +11,44 @@
         android:orientation="vertical"
         android:padding="10sp">
 
+
+            <TextView
+                android:id="@+id/predmetTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="TextView"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
         <TextView
-            android:id="@+id/classNameTxt"
+            android:id="@+id/ocjenaTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="TextView"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/opisTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="TextView"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/cjelinaTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="TextView"
+            android:textSize="24sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,19 +56,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/predmeti"
-                android:layout_width="87dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:text="Predmeti"
-                app:backgroundTint="@color/green" />
-
-            <Button
-                android:id="@+id/ucenici"
+                android:id="@+id/AddBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -47,17 +64,10 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="Učenici"
-                app:backgroundTint="@color/green" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+                android:text="Dodaj ocjenu" />
 
             <Button
-                android:id="@+id/classEditBtn"
+                android:id="@+id/DeleteBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -65,20 +75,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="Uredi "
-                app:backgroundTint="@color/green" />
-
-            <Button
-                android:id="@+id/classDeleteBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:text="Obriši"
-                app:backgroundTint="@color/green" />
+                android:text="Izbriši ocjenu" />
         </LinearLayout>
 
     </LinearLayout>

@@ -33,17 +33,17 @@ import java.util.List;
 import ba.sum.fpmoz.mim.R;
 import ba.sum.fpmoz.mim.model.Admin;
 import ba.sum.fpmoz.mim.model.Student;
+import ba.sum.fpmoz.mim.model.Subject;
 import ba.sum.fpmoz.mim.model.Teacher;
 import ba.sum.fpmoz.mim.model.User;
 
 import static android.content.ContentValues.TAG;
 
-
 public class AddUsersFragment extends Fragment{
 
     private FirebaseAuth mAuth;
     FirebaseDatabase db;
-    DatabaseReference ref, stu, nas, pred, raz, pred2;
+    DatabaseReference ref, stu, nas, pred, raz, pred2, profraz;
     EditText studentNameInp;
     EditText studentEmailInp;
     EditText studentPasswordInp;
@@ -214,6 +214,7 @@ public class AddUsersFragment extends Fragment{
                                     String id = ref.child(user.getUid()).setValue(newUser).toString();
                                     Teacher t = new Teacher(user.getUid(), user.getEmail(), user.getDisplayName(), course, uidpred);
                                     nas.child(user.getUid()).setValue(t);
+                                    profraz = db.getReference("nastavnici").child(user.getUid()).child("moji_razredi");
                                 }
                             });
                         } else {
@@ -241,8 +242,7 @@ public class AddUsersFragment extends Fragment{
                                     Student s = new Student(user.getUid(), user.getEmail(), user.getDisplayName(), "");
                                     stu.child(user.getUid()).setValue(s);
                                     raz.child("učenici");
-                                    raz.child(uidraz).child("učenici").child(user.getUid()).setValue(user.getUid());
-                                    raz.child(uidraz).child("učenici").child(user.getUid()).setValue(user.getDisplayName());
+                                    raz.child(uidraz).child("učenici").child(user.getUid()).setValue(s);
 
                                     pred2 = raz.child(uidraz).child("predmeti");
                                     pred2.addValueEventListener(new ValueEventListener() {
@@ -252,10 +252,15 @@ public class AddUsersFragment extends Fragment{
                                             for (DataSnapshot childDataSnapshot : dataSnapshot.getChildren()) {
                                                 Log.v(TAG,""+ childDataSnapshot.getKey());
                                                 Log.v(TAG,""+ childDataSnapshot.child("name").getValue());
+                                                Log.v(TAG,""+ childDataSnapshot.child("nastavnik").getValue());
+                                                Log.v(TAG,""+ childDataSnapshot.child("razred").getValue());
 
                                                 String key = childDataSnapshot.getKey();
                                                 String name = childDataSnapshot.child("name").getValue().toString();
-                                                stu.child(user.getUid()).child("predmeti").child(key).setValue(name);
+                                                String nastavnik = childDataSnapshot.child("nastavnik").getValue().toString();
+                                                String razred = childDataSnapshot.child("razred").getValue().toString();
+                                                Subject su = new Subject(key, name, nastavnik, razred);
+                                                stu.child(user.getUid()).child("predmeti").child(key).setValue(su);
                                             }
                                         }
                                         @Override

@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ednevnik">
+        <activity android:name=".TabbedSubjectsInStudents"></activity>
+        <activity android:name=".TabbedOcjeneProfesor" />
+        <activity android:name=".TabbedStudentsProfesor" />
+        <activity android:name=".TabbedClassesInfo" />
         <activity android:name=".TabbedProfesorClassesActivity" />
         <activity android:name=".TabbedSubjectsActivity" />
         <activity android:name=".SubjectAdminEditActivity" />

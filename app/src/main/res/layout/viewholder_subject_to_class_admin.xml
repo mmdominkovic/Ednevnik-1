@@ -45,7 +45,7 @@
                 app:backgroundTint="@color/green" />
 
             <Button
-                android:id="@+id/subjectDeleteBtn"
+                android:id="@+id/ocjeneBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
