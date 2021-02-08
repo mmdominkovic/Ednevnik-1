@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ednevnik">
         <activity android:name=".TabbedOcjeneStudent"></activity>
+        <activity android:name=".ChangePassword" />
+
         <activity android:name=".TabbedStudentActivity" />
         <activity android:name=".Ocijeni" />
         <activity android:name=".TabbedSubjectsInStudents" />

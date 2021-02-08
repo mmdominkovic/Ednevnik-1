@@ -6,11 +6,17 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeNavigationActivity extends AppCompatActivity {
     private CardView usersCardId;
     private CardView subjectCardId;
     private CardView classCardId;
+    private Button logout;
+    FirebaseAuth mAuth;
+
 
 
     @Override
@@ -18,6 +24,17 @@ public class HomeNavigationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_navigation);
         setTitle("Dobrodošli u administraciju" );
+
+        this.logout=findViewById(R.id.logout);
+        mAuth= FirebaseAuth.getInstance();
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+                signOutUser();
+            }
+        });
 
         this.usersCardId =findViewById(R.id.usersCardId);
         this.usersCardId.setOnClickListener(new View.OnClickListener() {
@@ -41,5 +58,13 @@ public class HomeNavigationActivity extends AppCompatActivity {
             Intent i = new Intent(getApplicationContext(), TabbedClassesActivity.class);
             startActivity(i);
         });
+
+    }
+
+    private void signOutUser() {
+        Intent mainActivity=new Intent(HomeNavigationActivity.this,MainActivity.class);
+        mainActivity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(mainActivity);
+        finish();
     }
 }

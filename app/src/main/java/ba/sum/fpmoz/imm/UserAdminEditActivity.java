@@ -33,7 +33,6 @@ public class UserAdminEditActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_admin_edit);
 
         this.studentNameEdt = findViewById(R.id.studentNameEdt);
-        this.studentSurnameEdt = findViewById(R.id.studentSurnameEdt);
         this.studentUidEdt = findViewById(R.id.studentUidEdt);
         this.studentEditBtn = findViewById(R.id.studentEditBtn);
 

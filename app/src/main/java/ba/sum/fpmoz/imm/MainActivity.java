@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
         Intent P = new Intent(getApplicationContext(),HomeNavigationProfesorActivity.class);
         Intent A = new Intent(getApplicationContext(), HomeNavigationActivity.class);
-        Intent S  = new Intent(getApplicationContext(), TabbedStudentActivity.class);
+        Intent S  = new Intent(getApplicationContext(), HomeNavigationStudentActivity.class);
 
         ref.addValueEventListener(new ValueEventListener() {
             @Override
