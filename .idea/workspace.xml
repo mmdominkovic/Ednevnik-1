@@ -32,18 +32,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d18851a-b015-421b-af95-686792ebff71" name="Default Changelist" comment="bugovi u view-s">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/ChangePassword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_change_password.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_icon_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_icon_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_icon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_icon_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_icon_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_icon_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_icon_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_icon_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_icon_round.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/HomeNavigationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/HomeNavigationActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/HomeNavigationProfesorActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/HomeNavigationProfesorActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/HomeNavigationStudentActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/HomeNavigationStudentActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/UserAdminEditActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ba/sum/fpmoz/imm/UserAdminEditActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home_navigation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home_profesor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home_profesor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home_student.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home_student.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +102,7 @@
     <property name="android-custom-viewC:/Users/Korisnik/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="android-custom-viewC:/Users/megid/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="multi-representation-previewC:/Users/Korisnik/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
     <property name="multi-representation-previewC:/Users/megid/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -450,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612767613230</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="finalna verzija">
+      <created>1612781874143</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1612781874143</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -477,7 +485,8 @@
     <MESSAGE value="dodavanje predmeta u učenike" />
     <MESSAGE value="proff" />
     <MESSAGE value="bugovi u view-s" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugovi u view-s" />
+    <MESSAGE value="finalna verzija" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalna verzija" />
   </component>
   <component name="WindowStateProjectService">
     <state x="475" y="0" key="#Ednevnik-1.Ednevnik.app" timestamp="1612766090201">
@@ -538,10 +547,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="117" key="AndroidThemeDialog/0.0.1536.824@0.0.1536.824" timestamp="1611242981431" />
-    <state x="1001" y="186" key="FileChooserDialogImpl" timestamp="1612014810548">
-      <screen x="75" y="0" width="1525" height="900" />
+    <state x="933" y="170" key="FileChooserDialogImpl" timestamp="1612785989657">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="933" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1611319449314" />
+    <state x="933" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1612785989657" />
     <state x="1001" y="186" key="FileChooserDialogImpl/75.0.1525.900@75.0.1525.900" timestamp="1612014810548" />
     <state x="561" y="260" key="Github.ShareDialog" timestamp="1611491988852">
       <screen x="0" y="0" width="1366" height="728" />
@@ -604,11 +613,11 @@
     </state>
     <state x="246" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1611491934626" />
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610981869017" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612767994546">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612782768706">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="321" y="128" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1611787452835" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612767994546" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612782768706" />
     <state x="433" y="158" key="Vcs.Push.Dialog.v2/75.0.1525.900@75.0.1525.900" timestamp="1612710330401" />
     <state x="1004" y="194" key="chooseDestDirectoryDialog" timestamp="1611241182025">
       <screen x="0" y="0" width="1536" height="824" />
