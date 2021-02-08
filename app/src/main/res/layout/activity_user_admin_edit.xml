@@ -20,14 +20,6 @@
             android:text="Name" />
 
         <EditText
-            android:id="@+id/studentSurnameEdt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
-
-        <EditText
             android:id="@+id/studentUidEdt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,8 +31,8 @@
             android:id="@+id/studentEditBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button"
-            android:backgroundTint="@color/green" />
+            android:backgroundTint="@color/green"
+            android:text="Spremi" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

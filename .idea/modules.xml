@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ednevnik-1.Ednevnik.iml" filepath="$PROJECT_DIR$/.idea/modules/Ednevnik-1.Ednevnik.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Ednevnik-1.Ednevnik.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Ednevnik-1.Ednevnik.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Ednevnik.iml" filepath="$PROJECT_DIR$/.idea/modules/Ednevnik.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Ednevnik.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Ednevnik.app.iml" />
     </modules>
   </component>
 </project>
