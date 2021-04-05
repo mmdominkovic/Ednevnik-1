@@ -1,4 +1,4 @@
-                                             
+ #E-dnevnik                                            
 Ovaj projekt su razvili studenti u sklopu kolegija "Programiranje aplikacija za mobilne uređaje" na diplomskom studiju Informatike, Fakulteta prirodoslovno-matematičkih i odgojnih znanosti kako bi uspješno obavili obaveze prema istom kolegiju. 
 Aplikacija je rad tima čiji su zadatci bili ravnopravno raspodjeljeni. Projekt je uspješno objavljen na Google Store gdje se može i pronaći pod istim nazivom te se nalazi u vlasništvu istoimenog fakulteta.
                                                    
